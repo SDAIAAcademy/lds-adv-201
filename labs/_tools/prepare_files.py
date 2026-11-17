@@ -381,21 +381,38 @@ def tco_sheet(wb: Workbook, n: dict, mod=D3) -> None:
     vol = lambda y: f"{n['in_scope_annual']}*(1+{n['growth']})^{y}"
     adopt = lambda y: n['adoption_y1'] if y == 1 else n['adoption_y2']
     h, m, acc, s, r = n['mean_handling'], n['cost_min'], n['accuracy'], n['saving_when_usable'], n['review_minutes']
+    # every amount comes from the option sheets and the missing-items sheet by reference, so a change
+    # in any item (a price x3, say) flows through the model
+    tot = wb.create_sheet("مجاميع البنود")
+    tot.sheet_view.rightToLeft = True
+    kinds = ["one_off", "annual", "per_agent_year", "per_drafted_answer"]
+    tot.append(["الخيار"] + kinds)
+    for c in tot[1]:
+        c.font, c.fill = HEAD, FILL
+    sums = {}
+    for opt, spec in mod.OPTIONS.items():
+        refs = {k: [] for k in kinds}
+        for i, (_, k, _, _) in enumerate(spec["items"], start=2):
+            refs[k].append(f"'الخيار {opt}'!$C${i}")
+        for i, (_, _, k, _, opts) in enumerate(mod.MISSING, start=2):
+            if opt in opts.split():
+                refs[k].append(f"'بنود غائبة'!$D${i}")
+        tot.append([opt] + ["=" + ("+".join(refs[k]) if refs[k] else "0") for k in kinds])
+        trow = tot.max_row
+        sums[opt] = {k: f"'مجاميع البنود'!${col}${trow}" for k, col in zip(kinds, "BCDE")}
+        sums[opt]["has_draft"] = bool(refs["per_drafted_answer"])
+    for col in "BCDE":
+        tot.column_dimensions[col].width = 18
     out = {}
     for opt, spec in mod.OPTIONS.items():
         share = "1" if "en" in spec["benefit"]["languages"] else n['ar_share']
-        extra = [(k, a) for key, _, k, a, opts in mod.MISSING if opt in opts.split()]
-        items = [(k, a) for _, k, a, _ in spec["items"]] + extra
-        one_off = sum(a for k, a in items if k == "one_off")
-        annual = sum(a for k, a in items if k == "annual")
-        per_agent = sum(a for k, a in items if k == "per_agent_year")
-        per_draft = sum(a for k, a in items if k == "per_drafted_answer")
+        q = sums[opt]
         cost_row = ws.max_row + 1
-        cells = [f"={one_off}"]
+        cells = [f"={q['one_off']}"]
         for y in (1, 2, 3):
-            parts = [str(annual), f"{per_agent}*{n['agents']}"]
-            if per_draft:
-                parts.append(f"{per_draft}*{vol(y)}*{adopt(y)}*{share}")
+            parts = [q["annual"], f"{q['per_agent_year']}*{n['agents']}"]
+            if q["has_draft"]:
+                parts.append(f"{q['per_drafted_answer']}*{vol(y)}*{adopt(y)}*{share}")
             cells.append("=" + "+".join(parts))
         ws.append([opt, "التكلفة"] + cells + [f"=SUM(C{cost_row}:F{cost_row})"])
         ben_row = ws.max_row + 1

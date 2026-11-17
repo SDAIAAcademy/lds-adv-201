@@ -61,10 +61,14 @@ REVIEW = '''# خمس إجابات تراجعها بيدك قبل أن تثق ب�
 import csv
 labels = {q["qid"]: q for q in J.read_csv(J.CASES[CASE] / "questions.csv")}
 for r in rows_starter[:5]:
-    q = labels[r["qid"]]
     print(r["qid"], "|", r["question"])
     print("   الإجابة:", r["answer"])
-    print("   المتوقع:", q["gold_fact"] or "امتناع", "من", q["gold_articles"] or "لا مصدر", "· التصحيح الآلي:", r["outcome"])'''
+# احكم على الإجابات الخمس في جدولك أولًا، ثم شغّل الخلية التالية لترى الوسم وحكم التصحيح الآلي'''
+
+REVEAL = '''# الوسم وحكم التصحيح الآلي للإجابات الخمس
+for r in rows_starter[:5]:
+    q = labels[r["qid"]]
+    print(r["qid"], "· المتوقع:", q["gold_fact"] or "امتناع", "من", q["gold_articles"] or "لا مصدر", "· التصحيح الآلي:", r["outcome"])'''
 
 ADAPT_PARTICIPANT = '''# التكييف (المختبر 2.4): غيّر الإعدادات ثم شغّل الخلية. لا تغيّر الأسئلة ولا التصحيح.
 adapted = dict(starter, label=f"{CASE}_adapted")
@@ -119,6 +123,7 @@ def cells(solution: bool):
         (CODE, STARTER_RUN),
         (MD, "## 3 · راجع بيدك\n\nاقرأ الإجابات الخمس، واحكم عليها بمعيار الإجابة الصحيحة في ميثاقك قبل أن تنظر إلى حكم التصحيح الآلي."),
         (CODE, REVIEW),
+        (CODE, REVEAL),
         (MD, "## 4 · التكييف وإعادة القياس (المختبر 2.4)\n\nغيّر ثلاثة إعدادات على الأقل، وشغّل على الأسئلة الثلاثين نفسها."),
         (CODE, ADAPT_SOLUTION if solution else ADAPT_PARTICIPANT),
         (CODE, COMPARE),

@@ -2,7 +2,7 @@
   <div class="box goal">
     <h3>ستخرج من هذا المختبر بـ</h3>
     <ul>
-      <li>ميثاق تجربة مكتوب قبل التشغيل: السؤال والمدة والمقاييس ومعايير التوقف.</li>
+      <li>ميثاق تجربة مكتوب قبل التشغيل: السؤال والمدة والمقاييس ومعايير التوقف (stop criteria).</li>
       <li>سجل تشغيل للنموذج المبدئي على 30 سؤالًا موسومًا، في <code>runs/</code>.</li>
       <li>حكمك اليدوي على خمس إجابات، مقارنًا بحكم التصحيح الآلي.</li>
     </ul>
@@ -12,7 +12,7 @@
   <div class="files">
     <a href="files/questions.csv" target="_blank"><b>questions.csv</b><span>الأسئلة الثلاثون: اللغة والفئة والجواب المتوقع والمقال المصدر، وهل للسؤال جواب</span></a>
     <a href="spike/jawab_spike.ipynb" target="_blank"><b>spike/jawab_spike.ipynb</b><span>دفتر التجربة، يعمل في Colab أو JupyterLab</span></a>
-    <a href="spike/jawab.py" target="_blank"><b>spike/jawab.py</b><span>النموذج الأولي «جواب»: الاسترجاع والصياغة والتصحيح وسجل التشغيل</span></a>
+    <a href="spike/jawab.py" target="_blank"><b>spike/jawab.py</b><span>النموذج الأولي «جواب»: الاسترجاع (retrieval) والصياغة والتصحيح وسجل التشغيل</span></a>
     <a href="files/baseline_reference.csv" target="_blank"><b>baseline_reference.csv</b><span>حصة كل فئة ولغة من الطلب</span></a>
   </div>
   <p class="small">في Colab: افتح <a href="https://colab.research.google.com/github/SDAIAAcademy/lds-adv-201/blob/main/labs/spike/jawab_spike.ipynb" target="_blank">الدفتر من المستودع</a>. على جهازك: افتح المجلد <code>labs/spike/</code> في JupyterLab. لا يحتاج الدفتر أي مكتبة ولا أي تنزيل لنموذج. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل، والحكم في الخطوة 4 حكمك.</p>
@@ -21,7 +21,7 @@
 
   <div class="step">
     <h3>1 · اقرأ الأسئلة الثلاثين ووسومها، وقارن توزيعها بفئات الطلب <span class="min">4 د</span></h3>
-    <p>كم سؤالًا بالعربية، وكم بالإنجليزية، وكم سؤالًا لا جواب له في قاعدة المعرفة؟ قارن حصة الإنجليزية في الأسئلة بحصتها في الطلب. ماذا يعني الفرق لقراءة الدقة الإجمالية؟</p>
+    <p>كم سؤالًا بالعربية، وكم بالإنجليزية، وكم سؤالًا لا جواب له في قاعدة المعرفة (knowledge base)؟ قارن حصة الإنجليزية في الأسئلة بحصتها في الطلب. ماذا يعني الفرق لقراءة الدقة الإجمالية؟</p>
   </div>
 
   <div class="step">
@@ -31,7 +31,7 @@
       <tr><td>السؤال الواحد</td><td class="fill">ما الذي تجيب عنه التجربة، ولا شيء غيره</td></tr>
       <tr><td>المدة</td><td class="fill">كم يومًا، وماذا يحدث في نهايتها</td></tr>
       <tr><td>الإجابة الصحيحة</td><td class="fill">متى تُعدّ الإجابة صحيحة، ومتى يُعدّ الامتناع صحيحًا</td></tr>
-      <tr><td>المقاييس</td><td class="fill">الدقة وفترتها، والدقة لكل لغة، وإخفاقات الاستناد، والتكلفة لكل إجابة صحيحة</td></tr>
+      <tr><td>المقاييس</td><td class="fill">الدقة وفترتها، والدقة لكل لغة، وإخفاقات الاستناد (grounding failures)، والتكلفة لكل إجابة صحيحة (cost per correct answer)</td></tr>
       <tr><td>العتبة ومعايير التوقف</td><td class="fill">من صفحة التأطير في المختبر 1.3، دون تغيير</td></tr>
     </table>
   </div>
