@@ -1,0 +1,21 @@
+قاموس بيانات سجل الاستفسارات المكتوبة (enquiries.csv)
+الفترة: 13 أسبوعًا (91 يومًا) من 28 يونيو 2026 إلى 26 سبتمبر 2026. اصطناعي بالكامل.
+
+enquiry_id            معرّف الاستفسار
+received_date         تاريخ الاستلام
+channel               القناة: web_form (نموذج الموقع)، app_chat (محادثة التطبيق)، email (البريد)
+language              لغة الاستفسار: ar أو en
+category              فئة الاستفسار كما صنفها الموظف (انظر القائمة أدناه)
+subject               عنوان الاستفسار كما كتبه المستفيد
+agent_id              معرّف الموظف
+handling_minutes      دقائق عمل الموظف على الاستفسار
+status                closed (أغلقه الموظف) أو auto_closed (أغلقه النظام بعد بقائه مفتوحًا في قائمة الموظف)
+first_response_hours  الساعات حتى أول رد
+repeat_within_7d      هل تواصل المستفيد مرة أخرى في الموضوع نفسه خلال 7 أيام: yes أو no
+qa_sample_type        none، أو targeted (اختاره مشرف)، أو random (عينة عشوائية)
+qa_result             نتيجة التدقيق: correct، أو wrong_info (معلومة خاطئة)، أو incomplete (ناقصة)؛ فارغ إن لم يُدقق
+
+الفئات: renew_licence, new_licence, minor_works, signage, waste, payments, parks, violations,
+excavation, street_vending, complaint_followup, other
+
+ملاحظة: صُدِّر السجل من النظام مرتين لبعض الأيام عند انقطاع التصدير الليلي.

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · تشغيل النموذج المبدئي على 30 سؤالًا · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_spike_run.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>تشغيل النموذج المبدئي على 30 سؤالًا</h1>
+<p>تكتب ميثاق التجربة، وتشغّل النموذج الأولي المبدئي في الدفتر على 30 سؤالًا موسومًا بالعربية والإنجليزية، وتراجع خمس إجابات بيدك بمعيار الإجابة الصحيحة</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: تصميم تجربة تقنية محددة المدة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>ميثاق تجربة مكتوب قبل التشغيل: السؤال والمدة والمقاييس ومعايير التوقف (stop criteria).</li>
+      <li>سجل تشغيل للنموذج المبدئي على 30 سؤالًا موسومًا، في <code>runs/</code>.</li>
+      <li>حكمك اليدوي على خمس إجابات، مقارنًا بحكم التصحيح الآلي.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/questions.csv" target="_blank"><b>questions.csv</b><span>الأسئلة الثلاثون: اللغة والفئة والجواب المتوقع والمقال المصدر، وهل للسؤال جواب</span></a>
+    <a href="spike/jawab_spike.ipynb" target="_blank"><b>spike/jawab_spike.ipynb</b><span>دفتر التجربة، يعمل في Colab أو JupyterLab</span></a>
+    <a href="spike/jawab.py" target="_blank"><b>spike/jawab.py</b><span>النموذج الأولي «جواب»: الاسترجاع (retrieval) والصياغة والتصحيح وسجل التشغيل</span></a>
+    <a href="files/baseline_reference.csv" target="_blank"><b>baseline_reference.csv</b><span>حصة كل فئة ولغة من الطلب</span></a>
+  </div>
+  <p class="small">في Colab: افتح <a href="https://colab.research.google.com/github/SDAIAAcademy/lds-adv-201/blob/main/labs/spike/jawab_spike.ipynb" target="_blank">الدفتر من المستودع</a>. على جهازك: افتح المجلد <code>labs/spike/</code> في JupyterLab. لا يحتاج الدفتر أي مكتبة ولا أي تنزيل لنموذج. إن ربطته بنموذج مستضاف فتذكّر أن التشغيل المبدئي لا يحترم الصلاحيات، فيرسل مقالات المشرفين إلى الخدمة؛ هذا مقبول هنا لأن كل الملفات اصطناعية، أما في جهتك فلا يصل مصدر مصنف «مقيدًا» أو أعلى إلى أداة ذكاء اصطناعي توليدي عامة. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل، والحكم في الخطوة 4 حكمك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ الأسئلة الثلاثين ووسومها، وقارن توزيعها بفئات الطلب <span class="min">5 د</span></h3>
+    <p>كم سؤالًا بالعربية، وكم بالإنجليزية، وكم سؤالًا لا جواب له في قاعدة المعرفة (knowledge base)؟ قارن حصة الإنجليزية في الأسئلة بحصتها في الطلب. ماذا يعني الفرق لقراءة الدقة الإجمالية؟</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · اكتب ميثاق التجربة: السؤال والمدة والمقاييس ومعايير التوقف <span class="min">7 د</span></h3>
+    <table>
+      <tr><th>البند</th><th>ما تكتبه</th></tr>
+      <tr><td>السؤال الواحد</td><td class="fill">ما الذي تجيب عنه التجربة، ولا شيء غيره</td></tr>
+      <tr><td>المدة</td><td class="fill">كم يومًا، وماذا يحدث في نهايتها</td></tr>
+      <tr><td>الإجابة الصحيحة</td><td class="fill">متى تُعدّ الإجابة صحيحة، ومتى يُعدّ الامتناع صحيحًا</td></tr>
+      <tr><td>المقاييس</td><td class="fill">الدقة وفترتها، والدقة لكل لغة، وإخفاقات الاستناد (grounding failures)، والتكلفة لكل إجابة صحيحة (cost per correct answer)</td></tr>
+      <tr><td>العتبة ومعايير التوقف</td><td class="fill">من صفحة التأطير في المختبر 1.3، دون تغيير</td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>3 · افتح الدفتر وشغّل النموذج المبدئي بإعداداته الأولى <span class="min">6 د</span></h3>
+    <p>شغّل خلايا الأقسام 1 و2 و3 بالترتيب. دون مفتاح، يصوغ المسودة بديل استخراجي ينسخ أقرب جملة ويستشهد بمقالها، فالنتيجة تقيس الاسترجاع والإعدادات. إن كان لديك مفتاح لنموذج مجاني، فاتبع خلية «النموذج» واكتب في الميثاق أي نموذج استخدمت.</p>
+    <pre class="code" data-file="الإعدادات المبدئية"><code>top_k = 3 · chunking = "article" · exclude_articles = [] · respect_permissions = False · min_score = 0.0</code></pre>
+  </div>
+
+  <div class="step">
+    <h3>4 · راجع خمس إجابات بيدك، وقارن حكمك بحكم التصحيح الآلي <span class="min">8 د</span></h3>
+    <p>احكم على كل إجابة بمعيار الميثاق قبل أن تقرأ حكم التصحيح الآلي. أين اختلفتما؟ ومن المصيب؟</p>
+    <table>
+      <tr><th>السؤال</th><th>حكمك</th><th>التصحيح الآلي</th><th>سبب الخلاف إن وُجد</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>5 · احفظ سجل التشغيل، واكتب معرّفه في الميثاق <span class="min">3 د</span></h3>
+    <p>الدفتر يكتب <code>runs/enquiries_starter.csv</code> و<code>runs/enquiries_starter.json</code>. نزّل الملفين، واكتب اسمهما في الميثاق: كل رقم تذكره بعد اليوم يعود إليهما.</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · اقرأ ما فعله النموذج المبدئي بالأسئلة الأربعة التي لا جواب لها <span class="min">6 د</span></h3>
+    <p>في سجل التشغيل، صفِّ الأسئلة التي لا جواب لها في الوسم. هل امتنع عن أي منها؟ بأي مقال استشهد؟ اكتب أي إعداد من الإعدادات الأولى يفسر ما رأيت.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أضف سؤالين من صياغتك لفئة لا تغطيها قاعدة المعرفة إلى نسخة من <code>questions.csv</code>، وشغّلهما، واكتب ما ينبغي أن يفعله النموذج.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل كتبت العتبة في الميثاق قبل أن ترى أي نتيجة؟</li>
+    <li>هل اتفق حكمك مع التصحيح الآلي في الإجابات الخمس؟ إن لم يتفق، فأيهما ستعتمد في الجدول، ولماذا؟</li>
+    <li>لماذا تحتاج المجموعة أسئلة لا جواب لها؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>التوزيع:</b> 20 سؤالًا بالعربية و10 بالإنجليزية، و4 أسئلة لا جواب لها (q17 وq18 وq19 وq28). الإنجليزية 33.3% من الأسئلة و18.2% من الطلب، فالدقة الإجمالية تُقرأ مع الدقة لكل لغة.</li>
+      <li><b>الإجابة الصحيحة:</b> تذكر الجواب المتوقع، وتستشهد بالمقال المصدر، وبلغة السؤال؛ والامتناع صحيح للأسئلة التي لا جواب لها فقط.</li>
+      <li><b>التشغيل المبدئي بالبديل الاستخراجي:</b> 15 من 30 (50.0%). تُراجع الأرقام في الجلسة 3، فلا تعلنها الآن.</li>
+      <li><b>المراجعة اليدوية:</b> q01 يخدع العين: الجواب «600 ريال» من A01 يبدو صحيحًا، والرسم 750 بعد التعميم 14. من يحكم دون الرجوع إلى الوسم يوافق على خطأ.</li>
+      <li><b>الخطأ الشائع:</b> ميثاق يُكتب بعد النتيجة، أو عتبة تُخفض لتناسب ما ظهر.</li>
+      <li><b>الخطوة 6:</b> أجاب النموذج المبدئي عن الأسئلة الأربعة كلها (q17 وq18 وq19 وq28) واستشهد بأقرب مقال، فصُححت كلها unsupported. السبب <code>min_score = 0.0</code>: لا عتبة امتناع، فكل سؤال يجد «أقرب» مقطع. هذه الملاحظة مدخل إعداد الامتناع في المختبر 2.4.</li>
+      <li>التحقق بالكود: <code>uv run labs/solutions/check.py 2.2</code>. الدفتر المرجعي في <code>labs/solutions/jawab_spike.ipynb</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_1_readiness_scorecard.html" rel="prev">→ المختبر السابق</a><a href="D2_3_uncertainty.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع d504cb3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:12Z","version":"2027.1.0","commit":"d504cb3"},"course":{"id":"lds-adv-201","code":"LDS-ADV-201","title":"تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-adv-201/","repo":"SDAIAAcademy/lds-adv-201","home":"../index.html"},"lab":{"id":"2.2","title":"تشغيل النموذج المبدئي على 30 سؤالًا","summary":"تكتب ميثاق التجربة، وتشغّل النموذج الأولي المبدئي في الدفتر على 30 سؤالًا موسومًا بالعربية والإنجليزية، وتراجع خمس إجابات بيدك بمعيار الإجابة الصحيحة","minutes":35,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_readiness_scorecard.html","next":"D2_3_uncertainty.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

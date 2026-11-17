@@ -1,0 +1,7 @@
+# A28 · إلغاء حجز الحديقة
+
+## ar
+يُلغى حجز مرفق الحديقة دون رسوم إذا أُلغي قبل 48 ساعة من الموعد.
+
+## en
+A park facility booking is cancelled free of charge if cancelled 48 hours before the booking.

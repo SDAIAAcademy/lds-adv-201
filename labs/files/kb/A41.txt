@@ -1,0 +1,7 @@
+# A41 · نافذة المحادثة
+
+## ar
+تعمل نافذة المحادثة في الموقع بتحويل المحادثة إلى أول موظف متاح.
+
+## en
+The website chat window passes the conversation to the first available agent.

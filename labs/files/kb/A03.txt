@@ -1,0 +1,7 @@
+# A03 · غرامة التأخير
+
+## ar
+غرامة التأخير في تجديد رخصة النشاط التجاري 100 ريال عن كل شهر تأخير. تبدأ الغرامة بعد انتهاء الرخصة بشهر واحد.
+
+## en
+The late penalty for renewing a commercial activity licence is 100 riyals for each month of delay. The penalty starts one month after the licence expires.

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.4 · الحساسية والتوصية · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D3_4_sensitivity.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day3.html#lab-3-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.4</span>
+<h1>الحساسية والتوصية</h1>
+<p>تحليل الحساسية على ثلاثة افتراضات: تبدأ من نموذج تكلفة مرجعي، فتحسب نقطة التعادل، وتغيّر الحجم والدقة والسعر، وتكتب التوصية ومؤشرات المنافع ومواعيد مراجعتها</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 3</span><span>الجلسة 4: نقطة التعادل وتحليل الحساسية والتوصية</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.4">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>نقطة التعادل (break-even) بالأشهر لكل خيار.</li>
+      <li>جدول حساسية: أثر الحجم والدقة وسعر النموذج على صافي القيمة (net value) ونقطة التعادل.</li>
+      <li>توصية في صفحة واحدة، بثلاثة مؤشرات منافع ومواعيد مراجعتها ومعيار توقف بعد الإطلاق.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/tco_reference.xlsx" target="_blank"><b>tco_reference.xlsx</b><span>نموذج التكلفة المرجعي بالصيغ: ورقة «النموذج» بالسنوات، وورقة «الأشهر» بالتدفق الشهري المتراكم</span></a>
+  </div>
+  <p class="small">ابدأ من النموذج المرجعي لا من نموذجك في المختبر 3.3، حتى تتطابق الأرقام في القاعة. احفظ نسخة قبل أي تغيير، وأعد كل افتراض إلى قيمته بعد كل اختبار. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل، ونقطة التعادل تحسبها مرة واحدة بيدك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · احسب نقطة التعادل بالأشهر لكل خيار <span class="min">6 د</span></h3>
+    <p>نقطة التعادل أول شهر يصبح فيه صافي التدفق المتراكم موجبًا. في ورقة «الأشهر»: التكلفة لمرة واحدة في الشهر 0، ثم التكلفة والمنافع السنوية مقسومة على 12. احسب خيارًا واحدًا بيدك أولًا، ثم قارنه بالورقة.</p>
+    <table>
+      <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+      <tr><td>نقطة التعادل (شهر)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>تستوفي قاعدة الاسترداد خلال 24 شهرًا؟</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>2 · غيّر الحجم بنسبة 20% صعودًا وهبوطًا، وسجّل الأثر <span class="min">5 د</span></h3>
+    <p>في «الافتراضات» اضرب <code>in_scope_annual</code> في 0.8 ثم في 1.2. سجّل صافي القيمة ونقطة التعادل لكل خيار في كل حالة.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · غيّر الدقة إلى الحد الأدنى لفترة الثقة، وسجّل الأثر <span class="min">6 د</span></h3>
+    <p>ضع قيمة <code>accuracy_low</code> مكان <code>accuracy</code>. هذا السؤال الذي سيطرحه المقيِّم: ماذا لو كانت الدقة الحقيقية في أسفل الفترة؟</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · ضاعف سعر النموذج ثلاث مرات، وسجّل الأثر <span class="min">4 د</span></h3>
+    <p>في ورقة «الخيار C» غيّر سعر المسودة من <code>0.0012</code> إلى <code>0.0036</code>. النموذج يقرأ كل مبلغ من أوراق الخيارات عبر ورقة «مجاميع البنود»، فلا تعدّل أي صيغة.</p>
+    <table>
+      <tr><th>الحالة</th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+      <tr><td>الأساس</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الحجم −20%</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الحجم +20%</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الدقة عند الحد الأدنى</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>سعر النموذج × 3</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>5 · اكتب التوصية وثلاثة مؤشرات منافع بمواعيد مراجعتها <span class="min">7 د</span></h3>
+    <div class="prompt" data-tool="قالب التوصية">نوصي بـ<span class="ph">الخيار</span>، لأن <span class="ph">صافي القيمة ونقطة التعادل</span>، وتبقى التوصية قائمة ما دام <span class="ph">الافتراض الذي غيّر النتيجة في الحساسية</span>. نقيس المنافع بـ<span class="ph">ثلاثة مؤشرات من خط الأساس (baseline)</span> بعد <span class="ph">90 يومًا وستة أشهر</span>، ونتوقف إذا <span class="ph">معيار التوقف بعد الإطلاق</span>.</div>
+  </div>
+
+  <div class="step">
+    <h3>6 · تدرّب على المناقشة: أجب عن ثلاثة تغييرات من نموذجك في دقيقتين لكل منها <span class="min">7 د</span></h3>
+    <p>يطلب زميلك تغييرًا واحدًا كل مرة: الحجم أقل بـ20%، أو الدقة عند الحد الأدنى، أو أن تمدد اللجنة قاعدة الاسترداد إلى 36 شهرًا. غيّر الخلية أمامه، وقل هل تتغير التوصية ولماذا، دون مساعد ذكي.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>ابحث عن قيمة الدقة التي تتساوى عندها أفضل خيارين، واكتبها شرطًا في التوصية.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>أي الافتراضات الثلاثة غيّر التوصية، وأيها لم يغيّرها؟</li>
+    <li>هل مؤشرات المنافع (benefit indicators) في توصيتك هي مقاييس خط الأساس نفسها؟</li>
+    <li>لو طلب المقيِّم حجمًا أقل بـ20% في المناقشة، كم دقيقة تحتاج لتجيبه من نموذجك؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>نقطة التعادل:</b> A في الشهر 13، وD في 26، وC في 29، وB لا يتعادل في ثلاث سنوات. A وحده يستوفي قاعدة الاسترداد خلال 24 شهرًا.</li>
+      <li><b>الحجم −20%:</b> A يبقى موجبًا (170,602، تعادل في الشهر 18)، والثلاثة الأخرى سالبة. <b>الحجم +20%:</b> كلها موجبة؛ A في الشهر 10، وD في 21، وC في 23، وB في 30.</li>
+      <li><b>الدقة عند الحد الأدنى (59.1%):</b> الخيارات الثلاثة المعتمدة على الذكاء الاصطناعي سالبة كلها؛ A لا يتأثر.</li>
+      <li><b>سعر النموذج × 3:</b> صافي C من 118,561 إلى 118,241. أثر لا يُذكر: التكلفة في المراجعة والصيانة لا في النموذج.</li>
+      <li><b>الامتناع، إن سأل أحد:</b> نموذج التكلفة يحسب المنافع بالدقة الإجمالية 76.7%، وفيها 3 امتناعات صحيحة. لو لم يوفر الامتناع الصحيح أي دقيقة لكانت الدقة الفعالة 20 من 30 = 66.7%: C عند −22,800 وD عند −1,866 وB عند −222,761، وA لا يتأثر. التوصية لا تتغير.</li>
+      <li><b>الإضافي:</b> يتساوى C مع A عند دقة 88.8% تقريبًا.</li>
+      <li><b>توصية مرجعية:</b> الخيار A الآن (تحديث المقالات وقوالب الردود)، فهو يعالج أيضًا سبب أكثر إخفاقات التجربة؛ وإعادة قياس C بعد تصحيح قاعدة المعرفة (knowledge base) على نحو 150 سؤالًا، والمضي فيه فقط إن تجاوزت الدقة 88.8% بحدها الأدنى فوق العتبة. المؤشرات: وسيط زمن المعالجة في الفئات المشمولة، ونسبة الخطأ في عينة عشوائية، ونسبة تكرار التواصل، بعد 90 يومًا وستة أشهر. التوقف: إن لم ينخفض الوسيط (median) 10% بعد ستة أشهر.</li>
+      <li><b>الخطوة 6:</b> الحجم −20%: A وحده موجب (170,602، تعادل في الشهر 18)، والتوصية لا تتغير. الدقة عند 59.1%: الخيارات الثلاثة المعتمدة على الذكاء الاصطناعي سالبة وA لا يتأثر، فلا تتغير. قاعدة 36 شهرًا: يستوفيها C (الشهر 29) وD (الشهر 26)، لكن صافي A أكبر، فتبقى التوصية A الآن مع إعادة قياس C. المهارة المطلوبة تغيير الخلية والإجابة بالرقم، لا إعادة الشرح.</li>
+      <li>التحقق بالكود: <code>uv run labs/solutions/check.py 3.4</code>؛ والصيغ تطابق حسابات <code>labs/solutions/costmodel.py</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D3_3_tco.html" rel="prev">→ المختبر السابق</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع d504cb3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:12Z","version":"2027.1.0","commit":"d504cb3"},"course":{"id":"lds-adv-201","code":"LDS-ADV-201","title":"تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-adv-201/","repo":"SDAIAAcademy/lds-adv-201","home":"../index.html"},"lab":{"id":"3.4","title":"الحساسية والتوصية","summary":"تحليل الحساسية على ثلاثة افتراضات: تبدأ من نموذج تكلفة مرجعي، فتحسب نقطة التعادل، وتغيّر الحجم والدقة والسعر، وتكتب التوصية ومؤشرات المنافع ومواعيد مراجعتها","minutes":35,"day":3,"unit":"اليوم 3","session":4,"deck":"../slides/day3.html#lab-3-4","prev":"D3_3_tco.html","next":null,"alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.1 · تصنيف مستوى المخاطر · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D3_1_risk_level.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day3.html#lab-3-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.1</span>
+<h1>تصنيف مستوى المخاطر</h1>
+<p>الجزء الأول من فحص المخاطر: تصنّف ست صيغ لحالة الاستخدام بمستوى مخاطرها ومعاييره، وتحدد ما يُستبعد وما يشترط إشرافًا بشريًا قبل الإطلاق وبعده</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 3</span><span>الجلسة 1: مستويات المخاطر والاستخدامات المحظورة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>مستوى مخاطر لكل صيغة من الصيغ الست لحالة الاستخدام، ومعه المعيار الذي حسمه.</li>
+      <li>الصيغة التي لا تمضي، وسبب استبعادها قبل أي تقدير للتكلفة.</li>
+      <li>ما يلزم كل صيغة عالية المخاطر قبل الإطلاق وبعده، ومنه الإشراف البشري (human oversight).</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/risk_levels.txt" target="_blank"><b>risk_levels.txt</b><span>ملخص مستويات المخاطر الأربعة في مبادئ أخلاقيات الذكاء الاصطناعي، وأسئلة الفحص الخمسة، ورابطا النصين الرسميين</span></a>
+    <a href="files/use_case_variants.csv" target="_blank"><b>use_case_variants.csv</b><span>ست صيغ لـ«جواب»، من المسودة للموظف إلى القرار الآلي</span></a>
+  </div>
+  <p class="small">الملخص بصياغة المقرر؛ والمرجع عند الخلاف النص الرسمي في <a href="https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf" target="_blank">مبادئ أخلاقيات الذكاء الاصطناعي</a>. سياسة الذكاء الاصطناعي: مساعد ذكي مرشد؛ والتصنيف تصنيفك، وفي الإضافي تقارنه بتصنيف المساعد.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ ورقة مستويات المخاطر ومعاييرها <span class="min">4 د</span></h3>
+    <p>المستويات أربعة: منخفضة أو منعدمة، ومحدودة، وعالية، وغير مقبولة. أسئلة الفحص الخمسة في آخر الورقة هي معاييرك: من يقرر، وهل يصل الناتج إلى الناس مباشرة، وأي بيانات، وهل يصنف الناس، وما الذي يحدث إذا أخطأ.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · صنّف الصيغ الست بمستوى المخاطر ودليله <span class="min">8 د</span></h3>
+    <table>
+      <tr><th>الصيغة</th><th>من يقرر؟</th><th>يصل إلى الناس مباشرة؟</th><th>يصنف الناس؟</th><th>المستوى</th><th>المعيار الذي حسمه</th></tr>
+      <tr><td>V1</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>V2</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>V3</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>V4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>V5</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>V6</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>3 · حدد الصيغة التي لا تمضي، واكتب السبب <span class="min">5 د</span></h3>
+    <p>الصيغة غير المقبولة لا يُقدَّر لها تكلفة ولا تُعالج بضوابط: تُستبعد من الخيارات. اكتب السبب في جملة تستشهد بالورقة.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · اكتب لكل صيغة عالية المخاطر ما يلزمها قبل الإطلاق وبعده <span class="min">6 د</span></h3>
+    <table>
+      <tr><th>الصيغة</th><th>قبل الإطلاق</th><th>بعد الإطلاق</th><th>نمط الإشراف البشري</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="small">أنماط الإشراف: إنسان يقرر في كل حالة، أو إنسان يراجع قبل أن يصل الناتج، أو إنسان يراقب عينات بعد ذلك.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · قارن تصنيفك بتصنيف زميل، وسجّل موضع الخلاف وسببه <span class="min">5 د</span></h3>
+    <p>الخلاف المفيد خلاف على معيار، لا على كلمة. أي سؤال من أسئلة الفحص الخمسة أجبتما عنه بطريقتين؟</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · أعد تصميم V3 لتنزل إلى مستوى محدود، واكتب ما الذي تغيّر <span class="min">7 د</span></h3>
+    <p>لا تغيّر النموذج ولا البيانات. غيّر من يقرر، ومن يصله الناتج، وما يراه الموظف. ثم أجب عن أسئلة الفحص الخمسة للصيغة الجديدة.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اطلب من مساعد ذكي أن يصنف الصيغ الست، ثم قارن أسبابه بأسبابك وصحّح ما أخطأ فيه بدليل من الورقة.</p>
+    <div class="prompt" data-tool="مساعد ذكي مرشد">هذه مستويات المخاطر الأربعة ومعاييرها: <span class="ph">الصق الورقة</span>. وهذه ست صيغ لحالة استخدام: <span class="ph">الصق الصيغ</span>. صنّف كل صيغة واذكر المعيار الذي حسم تصنيفها في جملة واحدة.</div>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل الفرق بين V1 وV3 في النموذج أم في التصميم؟</li>
+    <li>لماذا لا تُعالج الصيغة غير المقبولة بضوابط إضافية؟</li>
+    <li>أي صيغة تصل إلى السكان مباشرة، وما الذي يلزمها لذلك؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>V1</b> محدودة: يقترح على موظف يقرر ويرسل بنفسه.</li>
+      <li><b>V2</b> محدودة: يصل إلى السكان مباشرة في الرسوم والمستندات، فيلزمه الإفصاح بأنه نظام آلي وطريق إلى موظف. يُقبل «عالية» بدليل أن خطأ الرسوم يمس مال المستفيد.</li>
+      <li><b>V3</b> عالية: يقرر في مال شخص من ملفات فيها بيانات شخصية. يلزمه إنسان يقرر في كل حالة، وتقييم مطابقة (conformity assessment) قبل التشغيل وبعده.</li>
+      <li><b>V4</b> غير مقبولة: تنميط اجتماعي (social scoring) للسكان من سلوكهم وتأخير خدمتهم بحسبه. لا تمضي.</li>
+      <li><b>V5</b> منخفضة أو منعدمة: أرقام مجمعة دون بيانات شخصية للإدارة.</li>
+      <li><b>V6</b> عالية: يرتب الناس للتفتيش بحسب احتمال مخالفتهم. يلزمه تقييم للتحيز قبل الإطلاق، ومراجعة إنسان للترتيب، ومراقبة بعده.</li>
+      <li><b>الخطأ الشائع:</b> تصنيف الصيغ بحسب التقنية («كلها نموذج لغوي فمستواها واحد»)، أو معاملة V4 كعالية تُعالج بضوابط.</li>
+      <li><b>الخطوة 6:</b> «جواب» يلخص ملف طلب الإعفاء ويقترح على الموظف البنود التي تطابق الشروط المنشورة مع المقال المصدر؛ الموظف يقرر في كل حالة ويكتب الرد؛ لا يصل شيء من النظام إلى المستفيد مباشرة؛ وتُدقق عينة من القرارات شهريًا. يُقبل من يبقيها عالية لأن الاقتراح يمس مال الشخص، بشرط أن يذكر الإشراف الذي يلزمها.</li>
+      <li>التحقق بالكود: <code>uv run labs/solutions/check.py 3.1</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_4_adapt_decide.html" rel="prev">→ المختبر السابق</a><a href="D3_2_screening.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع d504cb3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:12Z","version":"2027.1.0","commit":"d504cb3"},"course":{"id":"lds-adv-201","code":"LDS-ADV-201","title":"تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-adv-201/","repo":"SDAIAAcademy/lds-adv-201","home":"../index.html"},"lab":{"id":"3.1","title":"تصنيف مستوى المخاطر","summary":"الجزء الأول من فحص المخاطر: تصنّف ست صيغ لحالة الاستخدام بمستوى مخاطرها ومعاييره، وتحدد ما يُستبعد وما يشترط إشرافًا بشريًا قبل الإطلاق وبعده","minutes":35,"day":3,"unit":"اليوم 3","session":1,"deck":"../slides/day3.html#lab-3-1","prev":"D2_4_adapt_decide.html","next":"D3_2_screening.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

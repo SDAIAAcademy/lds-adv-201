@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · حساب خط الأساس للخدمة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_baseline.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>حساب خط الأساس للخدمة</h1>
+<p>حساب خط الأساس للخدمة من سجلات اصطناعية: تنظف سجل 13 أسبوعًا من الاستفسارات المكتوبة، وتحسب لكل فئة الحجم الشهري ووسيط زمن المعالجة والمئين 90 ونسبة الخطأ وتكرار التواصل</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: خطوط الأساس المستخرجة من بيانات العمليات</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>خط أساس لكل فئة استفسار: الحجم الشهري، ووسيط زمن المعالجة، والمئين 90 (90th percentile).</li>
+      <li>نسبة خطأ من عينة تدقيق عشوائية، ونسبة تكرار التواصل.</li>
+      <li>قائمة بما نظّفته من السجل ولماذا، يستطيع المقيِّم أن يعيد بها حساب كل رقم.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/enquiries.csv" target="_blank"><b>enquiries.csv</b><span>سجل الاستفسارات المكتوبة لثلاثة عشر أسبوعًا، اصطناعي</span></a>
+    <a href="files/data_dictionary.txt" target="_blank"><b>data_dictionary.txt</b><span>معنى كل حقل</span></a>
+  </div>
+  <p class="small">جدول بيانات (LibreOffice Calc أو Microsoft Excel أو Google Sheets). سياسة الذكاء الاصطناعي: احسب دون مساعد ذكي، فهذا ما يطلبه الاختبار القصير المراقب. لا يحتاج المختبر نتيجة مختبر سابق.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · افتح سجل الاستفسارات واقرأ قاموس البيانات <span class="min">3 د</span></h3>
+    <p>افتح الملف في جدول البيانات، وتأكد أن الأعمدة ثلاثة عشر وأن العربية تظهر صحيحة. اقرأ الملاحظة الأخيرة في القاموس قبل أي حساب.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · احذف الصفوف المكررة، وعدّ الصفوف قبل الحذف وبعده <span class="min">5 د</span></h3>
+    <p>المفتاح هو <code>enquiry_id</code>. انسخ الورقة أولًا، ثم استخدم أداة إزالة التكرار على هذا العمود وحده. سجّل العددين والفرق.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · احسب الحجم الشهري لكل فئة <span class="min">5 د</span></h3>
+    <p>جدول محوري: الفئة في الصفوف، وعدد <code>enquiry_id</code> في القيم. الفترة 91 يومًا، فالحجم الشهري = العدد ÷ 91 × 30.4.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · احسب وسيط زمن المعالجة والمئين 90 بعد استبعاد الإغلاق الآلي <span class="min">8 د</span></h3>
+    <p>صفِّ <code>status</code> على <code>closed</code>، ثم احسب لكل فئة:</p>
+    <pre class="code" data-file="الصيغ"><code>=MEDIAN(IF(category="renew_licence", handling_minutes))
+=PERCENTILE.INC(IF(category="renew_licence", handling_minutes), 0.9)</code></pre>
+    <p>احسب المتوسط مرتين، مع الإغلاق الآلي ودونه، واكتب الفرق.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · احسب نسبة الخطأ من عينة التدقيق العشوائية وحدها، ونسبة تكرار التواصل <span class="min">7 د</span></h3>
+    <table>
+      <tr><th>العينة</th><th>عدد المدقق</th><th>غير صحيح</th><th>النسبة</th></tr>
+      <tr><td><code>random</code></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td><code>targeted</code></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الاثنتان معًا</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p>«غير صحيح» هو <code>wrong_info</code> و<code>incomplete</code> معًا. ثم: نسبة <code>repeat_within_7d = yes</code> من كل الاستفسارات بعد التنظيف.</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · بادل وصف التنظيف مع زميل ليعيد حساب رقمين <span class="min">7 د</span></h3>
+    <p>اكتب ما حذفته ولماذا وبأي عمود، بترتيب التنفيذ. يأخذ زميلك وصفك وحده ويعيد حساب عدد الصفوف بعد التنظيف ووسيط زمن المعالجة. إن لم يصل إلى رقميك فالوصف ناقص، لا الحساب.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>قارن الاستفسارات العربية بالإنجليزية في زمن المعالجة ونسبة الخطأ، واكتب هل يكفي حجم كل مجموعة للمقارنة.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>كم تغيّر المتوسط حين أبقيت الإغلاق الآلي؟ وكم تغيّر الوسيط (median)؟ لماذا يختلف أثره على الاثنين؟</li>
+    <li>لماذا لا تصلح العينة الموجَّهة لنسبة الخطأ، وتصلح لشيء آخر؟</li>
+    <li>أي رقم في خط أساسك سيطلب المقيِّم أن يعيد حسابه أولًا، وهل يستطيع ذلك من وصفك للتنظيف؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>الصفوف:</b> 17,628 قبل الحذف، و17,076 بعده (552 صفًا مكررًا من تصدير يومي 16 و17 أغسطس).</li>
+      <li><b>الإغلاق الآلي:</b> 304 استفسارات. زمن المعالجة للمغلق يدويًا: الوسيط 9.5 د، والمئين 90 قرابة 19.0 د، والمتوسط 11.01 د. مع الإغلاق الآلي يقفز المتوسط إلى 28.27 د ولا يكاد الوسيط يتغير.</li>
+      <li><b>الأكبر حجمًا:</b> تجديد الرخصة 990 شهريًا (الوسيط 8.3 د)، ومتابعة البلاغات 700 (14.9 د)، والسداد 688 (7.4 د). المرجع الكامل في <code>files/baseline_reference.csv</code>.</li>
+      <li><b>نسبة الخطأ:</b> العينة العشوائية 10.9% (183 استفسارًا، فترة ثقة 95% من 7.2% إلى 16.3%)؛ الموجّهة 28.5%؛ خلطهما 18.4%. من يخلط العينتين يضخّم المشكلة ويضخّم القيمة المتوقعة.</li>
+      <li><b>تكرار التواصل:</b> 12.7%.</li>
+      <li><b>الخطأ الشائع:</b> حساب نسبة الخطأ لكل فئة من عينة عشوائية صغيرة (5 إلى 36 استفسارًا في الفئة). احسبها للكل، واذكر حجم العينة.</li>
+      <li><b>الخطوة 6:</b> وصف كافٍ: إزالة التكرار على <code>enquiry_id</code> (552 صفًا من تصدير مكرر)، ثم استبعاد <code>status = auto_closed</code> من حساب زمن المعالجة (304 بعد إزالة التكرار)، ونسبة الخطأ من <code>qa_sample_type = random</code> وحدها. بهذا الوصف يصل الزميل إلى 17,076 وإلى وسيط 9.5 د. الوصف الناقص الشائع: «حذفنا المكرر» دون ذكر العمود.</li>
+      <li>التحقق بالكود: <code>uv run labs/solutions/check.py 1.2</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D1_1_decision_question.html" rel="prev">→ المختبر السابق</a><a href="D1_3_framing.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع d504cb3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:12Z","version":"2027.1.0","commit":"d504cb3"},"course":{"id":"lds-adv-201","code":"LDS-ADV-201","title":"تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-adv-201/","repo":"SDAIAAcademy/lds-adv-201","home":"../index.html"},"lab":{"id":"1.2","title":"حساب خط الأساس للخدمة","summary":"حساب خط الأساس للخدمة من سجلات اصطناعية: تنظف سجل 13 أسبوعًا من الاستفسارات المكتوبة، وتحسب لكل فئة الحجم الشهري ووسيط زمن المعالجة والمئين 90 ونسبة الخطأ وتكرار التواصل","minutes":35,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_decision_question.html","next":"D1_3_framing.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

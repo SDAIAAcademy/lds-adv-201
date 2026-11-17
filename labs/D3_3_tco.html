@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.3 · تكلفة الخيارات الأربعة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D3_3_tco.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day3.html#lab-3-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.3</span>
+<h1>تكلفة الخيارات الأربعة</h1>
+<p>تقدير تكاليف أربعة خيارات: تبني في جدول البيانات التكلفة الإجمالية للملكية على ثلاث سنوات لكل خيار، وتضيف البنود التي أغفلتها عروض الأسعار، وتحسب المنافع وصافي القيمة</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 3</span><span>الجلسة 3: الخيارات الأربعة والتكلفة الإجمالية للملكية</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.3">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>التكلفة الإجمالية للملكية (total cost of ownership, TCO) على ثلاث سنوات لكل خيار من الأربعة، مرتين: كما في عرض السعر، ومع البنود الغائبة.</li>
+      <li>المنافع السنوية لكل خيار من نتائج التجربة وخط الأساس (baseline)، بالصيغ.</li>
+      <li>ترتيب الخيارات بصافي القيمة (net value) على ثلاث سنوات.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/cost_sheets.xlsx" target="_blank"><b>cost_sheets.xlsx</b><span>الافتراضات، وورقة تكاليف لكل خيار من عرض سعره، والبنود الغائبة، وأنواع البنود</span></a>
+    <a href="files/vendor_dataflows.csv" target="_blank"><b>vendor_dataflows.csv</b><span>الخيارات الأربعة</span></a>
+  </div>
+  <p class="small">ورقة «الافتراضات» فيها خط الأساس المرجعي ونتائج التجربة المرجعية (الدقة 76.7% وحدها الأدنى 59.1%)، فلا يحتاج المختبر نتيجة سابقة لك. ابنِ نموذجك في ورقة جديدة في الملف نفسه، وكل رقم فيها صيغة تشير إلى خلية، لا رقم مكتوب. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل، ويجب أن تشرح كل صيغة.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ أوراق التكاليف الأربع وتوقع حجم الطلب <span class="min">5 د</span></h3>
+    <p>لكل بند نوع: مرة واحدة، أو كل سنة، أو لكل موظف في السنة، أو لكل مسودة. الحجم السنوي في النطاق يكبر كل سنة بنسبة <code>growth</code>.</p>
+    <pre class="code" data-file="الحجم في السنة y"><code>الحجم(y) = in_scope_annual × (1 + growth)^y</code></pre>
+  </div>
+
+  <div class="step">
+    <h3>2 · احسب تكلفة السنوات الثلاث لكل خيار بالصيغ <span class="min">8 د</span></h3>
+    <table>
+      <tr><th>الخيار</th><th>السنة 0 (مرة واحدة)</th><th>السنة 1</th><th>السنة 2</th><th>السنة 3</th><th>المجموع</th></tr>
+      <tr><td>A</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>B</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>C</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>D</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="small">البند «لكل مسودة» يُضرب في الحجم ونسبة الاستخدام؛ وفي D في نسبة الطلب العربي أيضًا، لأن المنصة لا تخدم إلا العربية.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · أضف بنود التقييم والمراجعة البشرية وصيانة المعرفة الناقصة <span class="min">7 د</span></h3>
+    <p>ورقة «بنود غائبة» تقول لكل بند أي الخيارات يلزمها. ومنها شرط عبور البوابة الذي كتبته في المختبر 3.2. أعد حساب المجموع، وضع الرقمين متجاورين.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · احسب المنافع السنوية لكل خيار من نتائج التجربة <span class="min">5 د</span></h3>
+    <pre class="code" data-file="المنافع في السنة y"><code>B و C: الحجم(y) × الاستخدام(y) × (الدقة × saving_when_usable × mean_handling − review_minutes) × cost_per_minute
+D:     مثلها × ar_share
+A:     الحجم(y) × (a_handling_cut + a_deflection) × mean_handling × cost_per_minute</code></pre>
+    <p class="small">المسودة الخاطئة لا توفر شيئًا وتكلف دقيقة مراجعة؛ لذلك تُطرح دقائق المراجعة من كل مسودة.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · رتّب الخيارات بصافي القيمة على ثلاث سنوات <span class="min">3 د</span></h3>
+    <p>صافي القيمة = مجموع المنافع − مجموع التكاليف مع البنود الغائبة. هل تغيّر الترتيب بعد إضافة البنود الغائبة؟</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · حدد البند الغائب الذي يغيّر صافي القيمة أكثر، وتحقق بإزالته مؤقتًا <span class="min">7 د</span></h3>
+    <p>أزل البند من الخيارات التي يلزمها، وأعد الترتيب، ثم أعده. هل يقلب البند وحده الترتيب؟ اكتب الجواب بجملة يفهمها الشريك المالي.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أعد ترتيب الخيارات إن كانت دقيقة العمل الموفَّرة لا تتحول إلى ريالات إلا بنصف قيمتها، واكتب ما الذي يعنيه ذلك للتوصية.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل في نموذجك رقم مكتوب داخل صيغة لا يشير إلى خلية؟ أين؟</li>
+    <li>أي بند غائب غيّر الترتيب أكثر من غيره؟</li>
+    <li>لماذا لا يُحسب لـ D إلا الطلب العربي؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>التكلفة على ثلاث سنوات، كما في العرض ثم مع البنود الغائبة:</b> A 305,000 ثم 305,000؛ B 477,400 ثم 877,120؛ C 350,160 ثم 677,160؛ D 208,823 ثم 535,823.</li>
+      <li><b>البنود الغائبة:</b> التقييم الدوري 48,000 في السنة (B وC وD)، وصيانة قاعدة المعرفة (knowledge base) 55,000 في السنة (B وC وD)، وإعادة كتابة محتوى المورد 18,000 مرة واحدة (C وD)، والاستضافة داخل المملكة 720 لكل مقعد في السنة (B، من شرط البوابة).</li>
+      <li><b>المنافع على ثلاث سنوات:</b> A 594,503؛ B وC 795,720؛ D 649,308.</li>
+      <li><b>صافي القيمة:</b> A 289,503؛ C 118,561؛ D 113,484؛ B −81,400. الترتيب: A ثم C ثم D ثم B. بعرض السعر وحده كان D أرخص الخيارات.</li>
+      <li><b>الخطأ الشائع:</b> حساب المنافع بالدقة كاملة دون طرح دقائق المراجعة، أو نسيان نسبة الاستخدام في السنة الأولى.</li>
+      <li><b>الخطوة 6:</b> أكبر بند صيانة قاعدة المعرفة: 55,000 في السنة، أي 165,000 في ثلاث سنوات لكل من B وC وD. دونه: A 289,503 وC 283,561 وD 278,484 وB 83,600. يبقى A أولًا بفارق صغير، فالترتيب لا يقلبه بند واحد بل مجموع البنود الغائبة. والصيانة ليست بندًا يمكن حذفه: لا يعمل أي مساعد على محتوى متقادم.</li>
+      <li>المرجع بالصيغ في <code>files/tco_reference.xlsx</code>، وهو ملف البداية للمختبر 3.4. التحقق بالكود: <code>uv run labs/solutions/check.py 3.3</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D3_2_screening.html" rel="prev">→ المختبر السابق</a><a href="D3_4_sensitivity.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع d504cb3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:12Z","version":"2027.1.0","commit":"d504cb3"},"course":{"id":"lds-adv-201","code":"LDS-ADV-201","title":"تقييم جدوى حالات استخدام الذكاء الاصطناعي وإعداد دراسات الجدوى","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-adv-201/","repo":"SDAIAAcademy/lds-adv-201","home":"../index.html"},"lab":{"id":"3.3","title":"تكلفة الخيارات الأربعة","summary":"تقدير تكاليف أربعة خيارات: تبني في جدول البيانات التكلفة الإجمالية للملكية على ثلاث سنوات لكل خيار، وتضيف البنود التي أغفلتها عروض الأسعار، وتحسب المنافع وصافي القيمة","minutes":35,"day":3,"unit":"اليوم 3","session":3,"deck":"../slides/day3.html#lab-3-3","prev":"D3_2_screening.html","next":"D3_4_sensitivity.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

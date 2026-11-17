@@ -1,0 +1,7 @@
+# A19 · طلب الحاوية
+
+## ar
+تُطلب حاوية النفايات من تطبيق الهيئة، وتُسلَّم خلال 3 أيام عمل من السداد.
+
+## en
+Request a waste container in the Hadaba app; it is delivered within 3 business days of payment.

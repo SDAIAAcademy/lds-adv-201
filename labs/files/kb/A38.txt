@@ -1,0 +1,7 @@
+# A38 · تسجيل الحساب
+
+## ar
+يُسجَّل الحساب في تطبيق الهيئة برقم الهوية ورقم الجوال المسجل.
+
+## en
+An account in the Hadaba app is registered with the ID number and the registered mobile number.

@@ -1,0 +1,7 @@
+# A40 · لغات الخدمة
+
+## ar
+تتوفر خدمات التطبيق باللغتين العربية والإنجليزية.
+
+## en
+The app's services are available in Arabic and English.

@@ -1,0 +1,31 @@
+﻿qid,lang,category,question,answerable,gold_fact,gold_articles
+q01,ar,shop_hygiene,كم غرامة مخالفة نظافة المحل الغذائي في المرة الأولى؟,yes,1000,B01
+q02,ar,signage_violation,متى تُزال اللوحة غير المرخصة؟,yes,30 يوم,B02
+q03,ar,building_violation,كم غرامة البناء دون رخصة للمخالفة البسيطة؟,yes,7500,B24
+q04,ar,pavement_occupation,كيف تُحسب غرامة إشغال الرصيف؟,yes,300,B04
+q05,ar,waste_dumping,كم غرامة رمي المخلفات في غير أماكنها؟,yes,2000,B05
+q06,ar,licence_expired,متى تسقط غرامة ممارسة النشاط برخصة منتهية؟,yes,سبق تاريخ المخالفة,B06
+q07,ar,general,ما أسباب قبول الاعتراض على المخالفة؟,yes,هوية المخالف,B07
+q08,ar,general,ما مهلة تقديم الاعتراض على المخالفة؟,yes,30 يوم,B08
+q09,ar,general,في كم يومًا يُبت في الاعتراض؟,yes,20 يوم عمل,B09
+q10,ar,general,هل يحق للمعترض التظلم إذا رُفض اعتراضه؟,yes,لجنة المراجعة,B10
+q11,ar,general,هل يسدد المعترض الغرامة قبل البت في اعتراضه؟,yes,يعلق,B11
+q12,ar,shop_hygiene,هل يسقط تقرير الزيارة اللاحقة مخالفة النظافة؟,yes,خطا في الضبط,B12
+q13,ar,building_violation,متى تسقط مخالفة البناء إذا كانت الأعمال ترميمًا؟,yes,رخصة ترميم سارية,B13
+q14,ar,waste_dumping,متى يُقبل الاعتراض على مخالفة رمي المخلفات؟,yes,صله المعترض,B14
+q15,ar,signage_violation,ما الذي يُسقط مخالفة اللوحة؟,yes,تصريحا ساريا,B15
+q16,ar,general,هل نقبل اعتراض محل صغير في مخالفته الأولى إذا كانت الغرامة قليلة؟,yes,هويه المخالف,B07
+q17,ar,general,ما نسبة الاعتراضات التي تقبلها الهيئة عادة؟,no,,
+q18,ar,general,هل يمكن تقسيط الغرامة بعد رفض الاعتراض؟,no,,
+q19,ar,general,متى تُعاد الغرامة المسددة إذا قُبل الاعتراض؟,yes,14 يوم,B23
+q20,ar,general,ما الذي يجب أن يذكره رد الاعتراض؟,yes,الماده,B17
+q21,ar,general,هل أذكر في الرد بيانات جار المعترض الذي شهد المخالفة؟,yes,شخص اخر,B18
+q22,ar,general,هل يُطلب من المعترض حضور جلسة استماع؟,no,,
+q23,en,general,How long does the objector have to file an objection?,yes,30 days,B08
+q24,en,general,How long does the agency take to decide an objection?,yes,20 business days,B09
+q25,en,general,Can a rejected objector appeal?,yes,review committee,B10
+q26,en,general,Must the fine be paid while the objection is pending?,yes,suspended,B11
+q27,en,building_violation,What is the fine for minor building work without a permit?,yes,"7,500|7500",B24
+q28,en,general,On what grounds is an objection accepted?,yes,identity,B07
+q29,en,signage_violation,What cancels a signage violation?,yes,valid permit,B15
+q30,en,general,Can the fine be reduced for good conduct?,no,,
