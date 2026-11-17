@@ -205,7 +205,7 @@ OPTIONS = {
         ("الاستضافة والفهرس", "annual", 30000, "yes"),
         ("الوحدات النصية للنموذج", "per_drafted_answer", 0.004, "yes")],
         "benefit": {"languages": "ar en", "ai": True}},
-    "D": {"name": "الشراكة مع منصة «ركيزة»", "items": [
+    "D": {"name": "الشراكة مع منصة «مَجرى»", "items": [
         ("الانضمام", "one_off", 90000, "yes"),
         ("رسوم كل مسودة", "per_drafted_answer", 1.2, "yes")],
         "benefit": {"languages": "ar", "ai": True}},

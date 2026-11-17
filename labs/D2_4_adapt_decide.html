@@ -33,12 +33,12 @@
   </div>
 
   <div class="step">
-    <h3>2 · غيّر ثلاثة إعدادات في الدفتر وأعد التشغيل <span class="min">5 د</span></h3>
+    <h3>2 · غيّر ثلاثة إعدادات على الأقل في الدفتر وأعد التشغيل <span class="min">5 د</span></h3>
     <p>في القسم 4 من الدفتر أربعة إعدادات. اختر لكل سبب في جدولك الإعداد الذي يعالجه، إن وُجد. لا تغيّر الأسئلة ولا التصحيح: التكييف الذي يغيّر الاختبار ليس تكييفًا.</p>
     <pre class="code" data-file="القسم 4 من الدفتر"><code>adapted["exclude_articles"]    = [...]    # المقالات التي لا ينبغي أن يسترجعها
-adapted["respect_permissions"] = True     # يقرأ ما يحق للدور فقط
-adapted["chunking"]            = "paragraph"   # أو "article"
-adapted["min_score"]           = 0.25     # تحتها يمتنع ويحيل إلى المختص</code></pre>
+adapted["respect_permissions"] = ...      # True: يقرأ ما يحق للدور فقط
+adapted["chunking"]            = ...      # "article" أو "paragraph"
+adapted["min_score"]           = ...      # عتبة الامتناع: تحتها يمتنع ويحيل إلى المختص</code></pre>
   </div>
 
   <div class="step">
