@@ -33,7 +33,7 @@
   </div>
 
   <div class="step">
-    <h3>4 · احسب وسيط زمن المعالجة والمئين 90 بعد استبعاد الإغلاق الآلي <span class="min">6 د</span></h3>
+    <h3>4 · احسب وسيط زمن المعالجة والمئين 90 بعد استبعاد الإغلاق الآلي <span class="min">8 د</span></h3>
     <p>صفِّ <code>status</code> على <code>closed</code>، ثم احسب لكل فئة:</p>
     <pre class="code" data-file="الصيغ"><code>=MEDIAN(IF(category="renew_licence", handling_minutes))
 =PERCENTILE.INC(IF(category="renew_licence", handling_minutes), 0.9)</code></pre>
@@ -41,7 +41,7 @@
   </div>
 
   <div class="step">
-    <h3>5 · احسب نسبة الخطأ من عينة التدقيق العشوائية وحدها، ونسبة تكرار التواصل <span class="min">6 د</span></h3>
+    <h3>5 · احسب نسبة الخطأ من عينة التدقيق العشوائية وحدها، ونسبة تكرار التواصل <span class="min">7 د</span></h3>
     <table>
       <tr><th>العينة</th><th>عدد المدقق</th><th>غير صحيح</th><th>النسبة</th></tr>
       <tr><td><code>random</code></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
@@ -49,6 +49,11 @@
       <tr><td>الاثنتان معًا</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
     </table>
     <p>«غير صحيح» هو <code>wrong_info</code> و<code>incomplete</code> معًا. ثم: نسبة <code>repeat_within_7d = yes</code> من كل الاستفسارات بعد التنظيف.</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · بادل وصف التنظيف مع زميل ليعيد حساب رقمين <span class="min">7 د</span></h3>
+    <p>اكتب ما حذفته ولماذا وبأي عمود، بترتيب التنفيذ. يأخذ زميلك وصفك وحده ويعيد حساب عدد الصفوف بعد التنظيف ووسيط زمن المعالجة. إن لم يصل إلى رقميك فالوصف ناقص، لا الحساب.</p>
   </div>
 
   <div class="step stretch">
@@ -72,6 +77,7 @@
       <li><b>نسبة الخطأ:</b> العينة العشوائية 10.9% (183 استفسارًا، فترة ثقة 95% من 7.2% إلى 16.3%)؛ الموجّهة 28.5%؛ خلطهما 18.4%. من يخلط العينتين يضخّم المشكلة ويضخّم القيمة المتوقعة.</li>
       <li><b>تكرار التواصل:</b> 12.7%.</li>
       <li><b>الخطأ الشائع:</b> حساب نسبة الخطأ لكل فئة من عينة عشوائية صغيرة (5 إلى 36 استفسارًا في الفئة). احسبها للكل، واذكر حجم العينة.</li>
+      <li><b>الخطوة 6:</b> وصف كافٍ: إزالة التكرار على <code>enquiry_id</code> (552 صفًا من تصدير مكرر)، ثم استبعاد <code>status = auto_closed</code> من حساب زمن المعالجة (304 بعد إزالة التكرار)، ونسبة الخطأ من <code>qa_sample_type = random</code> وحدها. بهذا الوصف يصل الزميل إلى 17,076 وإلى وسيط 9.5 د. الوصف الناقص الشائع: «حذفنا المكرر» دون ذكر العمود.</li>
       <li>التحقق بالكود: <code>uv run labs/solutions/check.py 1.2</code>.</li>
     </ul>
   </details>
