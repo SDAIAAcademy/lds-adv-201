@@ -1,0 +1,7 @@
+# A42 · استعادة كلمة المرور
+
+## ar
+لاستعادة كلمة المرور اختر «نسيت كلمة المرور» وأدخل رقم الجوال المسجل.
+
+## en
+To reset the password, choose Forgot password and enter the registered mobile number.

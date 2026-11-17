@@ -1,0 +1,25 @@
+﻿article_id,title,category,collection,classification,source,licence_note,owner,last_reviewed,status,has_en
+B01,غرامة النظافة,shop_hygiene,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B02,غرامة اللوحة,signage_violation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B03,غرامة البناء,building_violation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2025-06-15,current,no
+B04,غرامة إشغال الرصيف,pavement_occupation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B05,غرامة المخلفات,waste_dumping,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B06,غرامة الرخصة المنتهية,licence_expired,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B07,أسباب قبول الاعتراض,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,yes
+B08,مهلة الاعتراض,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,yes
+B09,مدة البت,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,yes
+B10,التظلم,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,yes
+B11,تعليق السداد,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,yes
+B12,اعتراض النظافة,shop_hygiene,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B13,اعتراض البناء,building_violation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B14,اعتراض المخلفات,waste_dumping,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B15,اعتراض اللوحة,signage_violation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B16,اعتراض الإشغال,pavement_occupation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B17,صياغة الرد,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B18,بيانات الآخرين,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B19,مدة البت (قديم),general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2024-11-01,current,no
+B20,توجيه التسوية الداخلي,general,legal_internal,مقيد,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-03-10,current,no
+B21,مستهدف الرقابة,general,legal_internal,مقيد,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-03-10,current,no
+B22,قالب الرد,general,vendor_templates,مقيد,vendor,مرخص للاستخدام داخل نظام المراسلات فقط,مورد نظام المراسلات,2025-12-01,current,no
+B23,إعادة المبالغ,general,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-02-01,current,no
+B24,تعديل اللائحة 2026,building_violation,reg_public,عام,agency,محتوى من إعداد الهيئة,الإدارة القانونية,2026-05-20,current,no

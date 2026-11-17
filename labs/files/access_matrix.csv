@@ -1,0 +1,6 @@
+﻿role,kb_public,vendor_pack,kb_internal,kb_supervisor,enforcement_notes,case_files,enquiry_logs
+agent,R,R,R,-,-,R,-
+supervisor,R,R,R,R,-,R,R
+inspector,R,-,-,-,R,-,-
+data_analyst,R,-,-,-,-,-,R
+svc-jawab,R,R,R,R,R,R,R

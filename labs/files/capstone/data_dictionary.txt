@@ -1,0 +1,18 @@
+قاموس بيانات سجل الاعتراضات (objections.csv)
+الفترة: 26 أسبوعًا (182 يومًا) من 4 يناير 2026 إلى 4 يوليو 2026. اصطناعي بالكامل.
+
+objection_id          معرّف الاعتراض
+received_date         تاريخ الاستلام
+channel               القناة: web_form أو app_chat أو email
+language              لغة الاعتراض: ar أو en
+category              نوع المخالفة
+subject               عنوان الاعتراض كما كتبه المعترض
+officer_id            معرّف الموظف
+drafting_minutes      دقائق عمل الموظف على صياغة الرد
+status                closed أو auto_closed (أغلقه النظام بعد بقائه مفتوحًا)
+days_to_decision      الأيام حتى القرار
+appealed              هل تظلم المعترض بعد الرد: yes أو no
+qa_sample_type        none أو targeted أو random
+qa_result             correct أو wrong_info أو incomplete؛ فارغ إن لم يُدقق
+
+ملاحظة: انتقل النظام إلى منصة جديدة خلال الفترة.

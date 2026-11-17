@@ -1,0 +1,31 @@
+﻿qid,lang,category,question,answer,cited,top_article,top_score,tokens_in,tokens_out,cost_usd,outcome
+q01,ar,renew_licence,كم رسوم تجديد رخصة النشاط التجاري للسنة؟,رسوم تجديد رخصة النشاط التجاري 600 ريال للسنة الواحدة. [A01],A01,A01,0.494,380,20,0.00008400,wrong_source
+q02,ar,renew_licence,ما المستندات المطلوبة لتجديد رخصة النشاط التجاري؟,مستندات تجديد رخصة النشاط التجاري: سجل تجاري سارٍ، وعقد إيجار موثق، وشهادة سلامة سارية. [A02],A02,A02,0.385,301,31,0.00007260,correct
+q03,ar,renew_licence,كم غرامة التأخير في تجديد الرخصة التجارية عن كل شهر؟,غرامة التأخير في تجديد رخصة النشاط التجاري 100 ريال عن كل شهر تأخير. [A03],A03,A03,0.647,306,25,0.00007120,correct
+q04,ar,new_licence,كم رسوم إصدار رخصة نشاط تجاري جديدة؟,"رسوم إصدار رخصة نشاط تجاري جديدة 1,200 ريال. [A05]",A05,A05,0.624,286,17,0.00006400,correct
+q05,ar,new_licence,كم تستغرق مدة إصدار رخصة النشاط التجاري الجديدة؟,مدة إصدار رخصة النشاط التجاري الجديدة 3 أيام عمل من اكتمال المستندات. [A07],A07,A07,0.532,281,25,0.00006620,correct
+q06,ar,minor_works,كم رسوم رخصة الترميم للأعمال البسيطة؟,رسوم رخصة الترميم للأعمال البسيطة 300 ريال. [A09],A09,A09,0.661,258,16,0.00005800,wrong_source
+q07,ar,minor_works,ما مدة إصدار رخصة الترميم للأعمال البسيطة؟,مدة إصدار رخصة الترميم للأعمال البسيطة 10 أيام عمل. [A11],A11,A11,0.778,260,19,0.00005960,wrong_source
+q08,ar,signage,ما أقصى مساحة مسموحة للوحة الإعلانية على واجهة المحل؟,الحد الأقصى لمساحة اللوحة الإعلانية على واجهة المحل 12 مترًا مربعًا، ولا تتجاوز اللوحة عرض الواجهة. [A16],A16,A16,0.616,273,35,0.00006860,correct
+q09,ar,waste,كم إيجار حاوية النفايات في الأسبوع؟,إيجار حاوية النفايات 150 ريالًا للأسبوع، ويشمل التفريغ مرة واحدة. [A18],A18,A18,0.534,345,24,0.00007860,wrong_source
+q10,ar,waste,ما المواد الممنوع وضعها في حاويات النفايات؟,يُمنع وضع المواد الكيميائية والبطاريات والإطارات في حاويات النفايات، ولها نقاط تجميع خاصة. [A21],A21,A21,0.476,263,32,0.00006540,correct
+q11,ar,payments,متى يعاد المبلغ إذا رُفض طلبي؟,يُعاد المبلغ المدفوع عن طلب مرفوض خلال 14 يومًا إلى الحساب الذي دُفع منه. [A24],A24,A24,0.372,269,26,0.00006420,correct
+q12,ar,payments,كيف أسدد الرسوم البلدية؟,تُسدَّد الرسوم البلدية من تطبيق الهيئة أو من بوابة الدفع الإلكتروني، ولا يُقبل الدفع النقدي في المراكز. [A22],A22,A22,0.340,297,36,0.00007380,correct
+q13,ar,parks,هل يمكن إلغاء حجز مرفق الحديقة دون رسوم؟,يُلغى حجز مرفق الحديقة دون رسوم إذا أُلغي قبل 48 ساعة من الموعد. [A28],A28,A28,0.560,251,23,0.00005940,correct
+q14,ar,violations,ما المهلة المتاحة للاعتراض على مخالفة بلدية؟,للاعتراض على فاتورة رسوم ارفع الاعتراض من التطبيق مع سبب الاعتراض، وتُعلَّق مهلة السداد حتى البت فيه. [A25],A25,A25,0.373,275,36,0.00006940,wrong_source
+q15,ar,payments,دخلي محدود، فكيف أطلب الإعفاء من رسوم رخصة الترميم؟,يُقدَّم طلب الإعفاء من الرسوم من التطبيق مع المستندات الداعمة، وتبت فيه لجنة الإعفاءات خلال 15 يوم عمل. [A32],A32,A32,0.328,306,36,0.00007560,correct
+q16,ar,payments,ما شروط قبول طلب الإعفاء من الرسوم البلدية؟,"شروط قبول طلب الإعفاء من الرسوم البلدية (داخلي): يُعفى من الرسوم من يقل دخله الشهري عن 8,000 ريال، ويُعرض على اللجنة من يزيد دخله على ذلك. [A33]",A33,A33,0.462,303,48,0.00007980,permission_leak
+q17,ar,excavation,كم رسوم تصريح الحفر لتمديد خط مياه أمام المنزل؟,رسوم تصريح اللوحة الإعلانية 200 ريال لكل متر مربع في السنة. [A14],A14,A14,0.331,343,22,0.00007740,unsupported
+q18,ar,street_vending,ما شروط تصريح عربة الطعام المتجولة؟,يُجدَّد تصريح اللوحة الإعلانية سنويًا مع رخصة النشاط التجاري. [A17],A17,A17,0.162,254,22,0.00005960,unsupported
+q19,ar,complaint_followup,ما حالة بلاغي الذي قدمته الأسبوع الماضي عن إنارة الشارع؟,يُعاد المبلغ المدفوع عن طلب مرفوض خلال 14 يومًا إلى الحساب الذي دُفع منه. [A24],A24,A24,0.167,263,26,0.00006300,unsupported
+q20,ar,parks,كم رسوم حجز قاعة الحديقة لليوم؟,رسوم حجز قاعة الحديقة 250 ريالًا لليوم الواحد. [A26],A26,A26,0.754,334,17,0.00007360,wrong_source
+q21,en,renew_licence,How long is a renewed commercial licence valid?,A renewed licence is valid for one year from the renewal date. [A04],A04,A04,0.481,319,23,0.00007300,correct
+q22,en,signage,What is the signage permit fee per square metre?,The signage permit fee is 200 riyals per square metre a year. [A14],A14,A14,0.763,363,22,0.00008140,wrong_source
+q23,en,new_licence,Which documents do I need for a new shop licence?,A new commercial activity licence is issued within 3 business days of complete documents. [A07],A07,A07,0.328,312,32,0.00007520,wrong_source
+q24,en,waste,How soon is a waste container delivered after I pay?,Request a waste container in the Hadaba app; it is delivered within 3 business days of payment. [A19],A19,A19,0.496,398,34,0.00009320,correct
+q25,en,payments,When is my money refunded if my application is rejected?,A payment for a rejected application is refunded within 14 days to the account it was paid from. [A24],A24,A24,0.519,295,34,0.00007260,correct
+q26,en,parks,How much is the deposit for booking a park facility?,A park facility booking is cancelled free of charge if cancelled 48 hours before the booking. [A28],A28,A28,0.457,398,33,0.00009280,wrong_source
+q27,en,minor_works,Does repainting my house count as minor works?,The renovation permit fee for minor works is now 400 riyals. [A48],A48,A48,0.157,385,22,0.00008580,wrong_source
+q28,en,excavation,Do I need a permit to dig in front of my house for a water line?,"To get a signage permit, upload a photo of the shopfront, the sign design with its dimensions and the valid activity licence. [A15]",A15,A15,0.206,401,44,0.00009780,unsupported
+q29,en,payments,Can I pay municipal fees in cash?,Municipal fees are paid in the Hadaba app or on the online payment portal; cash is not accepted at service centres. [A22],A22,A22,0.385,382,40,0.00009240,correct
+q30,en,violations,Is there a discount if I pay a violation early?,A 25% discount applies when a violation is paid within 15 days of the notice. [A30],A30,A30,0.410,281,28,0.00006740,correct

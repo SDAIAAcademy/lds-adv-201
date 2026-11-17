@@ -1,0 +1,31 @@
+﻿qid,lang,category,question,answerable,gold_fact,gold_articles
+q01,ar,renew_licence,كم رسوم تجديد رخصة النشاط التجاري للسنة؟,yes,750,A48
+q02,ar,renew_licence,ما المستندات المطلوبة لتجديد رخصة النشاط التجاري؟,yes,عقد إيجار موثق,A02
+q03,ar,renew_licence,كم غرامة التأخير في تجديد الرخصة التجارية عن كل شهر؟,yes,100 ريال,A03
+q04,ar,new_licence,كم رسوم إصدار رخصة نشاط تجاري جديدة؟,yes,1200,A05
+q05,ar,new_licence,كم تستغرق مدة إصدار رخصة النشاط التجاري الجديدة؟,yes,3 أيام عمل,A07
+q06,ar,minor_works,كم رسوم رخصة الترميم للأعمال البسيطة؟,yes,400,A48
+q07,ar,minor_works,ما مدة إصدار رخصة الترميم للأعمال البسيطة؟,yes,5 أيام عمل,A12
+q08,ar,signage,ما أقصى مساحة مسموحة للوحة الإعلانية على واجهة المحل؟,yes,12 متر,A16
+q09,ar,waste,كم إيجار حاوية النفايات في الأسبوع؟,yes,180,A48
+q10,ar,waste,ما المواد الممنوع وضعها في حاويات النفايات؟,yes,المواد الكيميائية,A21
+q11,ar,payments,متى يعاد المبلغ إذا رُفض طلبي؟,yes,14 يوم,A24
+q12,ar,payments,كيف أسدد الرسوم البلدية؟,yes,تطبيق الهيئة,A22
+q13,ar,parks,هل يمكن إلغاء حجز مرفق الحديقة دون رسوم؟,yes,48 ساعة,A28
+q14,ar,violations,ما المهلة المتاحة للاعتراض على مخالفة بلدية؟,yes,30 يوم,A31
+q15,ar,payments,دخلي محدود، فكيف أطلب الإعفاء من رسوم رخصة الترميم؟,yes,15 يوم عمل,A32
+q16,ar,payments,ما شروط قبول طلب الإعفاء من الرسوم البلدية؟,yes,لجنة,A32
+q17,ar,excavation,كم رسوم تصريح الحفر لتمديد خط مياه أمام المنزل؟,no,,
+q18,ar,street_vending,ما شروط تصريح عربة الطعام المتجولة؟,no,,
+q19,ar,complaint_followup,ما حالة بلاغي الذي قدمته الأسبوع الماضي عن إنارة الشارع؟,no,,
+q20,ar,parks,كم رسوم حجز قاعة الحديقة لليوم؟,yes,300,A48
+q21,en,renew_licence,How long is a renewed commercial licence valid?,yes,one year,A04
+q22,en,signage,What is the signage permit fee per square metre?,yes,240,A48
+q23,en,new_licence,Which documents do I need for a new shop licence?,yes,lease|title deed,A06
+q24,en,waste,How soon is a waste container delivered after I pay?,yes,3 business days,A19
+q25,en,payments,When is my money refunded if my application is rejected?,yes,14 days,A24
+q26,en,parks,How much is the deposit for booking a park facility?,yes,500,A27
+q27,en,minor_works,Does repainting my house count as minor works?,yes,minor works|painting|paint,A13
+q28,en,excavation,Do I need a permit to dig in front of my house for a water line?,no,,
+q29,en,payments,Can I pay municipal fees in cash?,yes,cash is not accepted|app,A22
+q30,en,violations,Is there a discount if I pay a violation early?,yes,25%,A30

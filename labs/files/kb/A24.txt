@@ -1,0 +1,7 @@
+# A24 · استرداد المبالغ
+
+## ar
+يُعاد المبلغ المدفوع عن طلب مرفوض خلال 14 يومًا إلى الحساب الذي دُفع منه.
+
+## en
+A payment for a rejected application is refunded within 14 days to the account it was paid from.

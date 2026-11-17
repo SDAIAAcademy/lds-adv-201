@@ -1,0 +1,7 @@
+# A30 · خصم السداد المبكر
+
+## ar
+يحصل المخالف على خصم 25% إذا سدد المخالفة خلال 15 يومًا من إشعاره.
+
+## en
+A 25% discount applies when a violation is paid within 15 days of the notice.

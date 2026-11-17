@@ -1,0 +1,7 @@
+# B09 · مدة البت
+
+## ar
+يُبت في الاعتراض خلال 20 يوم عمل، ويُبلَّغ المعترض بالقرار وأسبابه كتابةً.
+
+## en
+An objection is decided within 20 business days and the objector is told the decision and its reasons in writing.

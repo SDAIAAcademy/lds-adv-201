@@ -1,0 +1,7 @@
+# A29 · الاستعلام عن المخالفات
+
+## ar
+يُستعلم عن المخالفات البلدية من التطبيق برقم الهوية أو رقم السجل التجاري.
+
+## en
+Municipal violations can be checked in the app with the ID number or the commercial registration number.
