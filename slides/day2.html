@@ -1,158 +1,476 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>صباح الخير. اسأل: من وجد أمس رقمًا غيّر رأيه في طلب «روبوت المحادثة»؟ دع اثنين يجيبان. إيقاع اليوم: الجلسة الأولى تكمل الجاهزية، والثلاث الأخرى تجربة تقنية واحدة: نصممها، ونقرأ نتيجتها، ونكيّفها ونقرر.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>اليوم يجيب عن اختبارين من الأربعة: بقية الجاهزية، ثم الجدوى التقنية. في نهاية اليوم قرار مكتوب بالمضي أو إعادة العمل أو التوقف، مقابل العتبة التي كتبتموها أمس.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-4" data-lo="LO2">
+  <div class="kicker">ما أظهره المختبر 1.4</div>
+  <h2>قاعدة المعرفة تغطي معظم الطلب، وجودتها معيقة</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">71.4%</div><div class="lbl">من الطلب في الفئات الثماني التي تجيب عنها المقالات؛ وأكبر فئة خارجها متابعة البلاغات 12.3%</div></div>
+    <div class="stat"><div class="big">5 + 1</div><div class="lbl">خمس مقالات رسوم متقادمة بعد التعميم 14، ومقالان متعارضان في المدة (A11 وA12)</div></div>
+    <div class="stat"><div class="big">6</div><div class="lbl">مقالات من حزمة المورد مرخصة داخل منصته فقط</div></div>
+  </div>
+  <div class="callout note mt"><b>البطاقة المرجعية:</b> التغطية 1، والجودة 0 (معيقة حتى تُصحح الرسوم)، وحقوق الاستخدام 1. المرجع في <code>kb_findings_reference.csv</code>.</div>
+  <aside class="notes"><p>ثلاث دقائق. اسأل: كم طاولة وثقت بحقل <code>status</code> في الفهرس؟ كلها تقول <code>current</code>. والإنجليزية: 23 مقالًا من 48 فقط لها نسخة إنجليزية. هذه الأرقام ستظهر اليوم في التجربة: المقالات المتقادمة ستُسترجع.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s1" data-auto="section" data-session="1">
+  <aside class="notes"><p>الجلسة الأولى: المعايير الثلاثة الباقية في بطاقة الجاهزية. نحو 20 دقيقة شرح، ثم نقطة تحقق، ثم المختبر 2.1.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="three-more-criteria" data-lo="LO2">
+  <div class="kicker">بقية بطاقة الجاهزية</div>
+  <h2>ثلاثة معايير لا تسأل عن جودة المحتوى، بل عمّن يحق له رؤيته</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>التصنيف</h4><p class="small mb0">ما مستوى كل مصدر في سياسة تصنيف البيانات؟ وأي مستوى يجوز أن يمر بخدمة خارجية؟</p></div>
+    <div class="card c-coral"><h4>البيانات الشخصية</h4><p class="small mb0">ما الذي في الملفات من بيانات شخصية وحساسة؟ وهل يحتاجها الغرض أصلًا؟</p></div>
+    <div class="card c-purple"><h4>الصلاحيات</h4><p class="small mb0">هل يقرأ الحل ما لا يحق للمستخدم الذي يسأل أن يقرأه؟</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout tip mt"><b>المقياس نفسه:</b> من 0 (معيق) إلى 3 (جاهز)، ودليل لكل درجة، وصاحب لكل فجوة.</div>
+  <aside class="notes"><p>اربط بأمس: المعايير الثلاثة الأولى عن المحتوى، وهذه الثلاثة عن الوصول والحماية. كثيرًا ما تسقط دراسات الجدوى هنا لا في التقنية، ويُكتشف ذلك متأخرًا بعد أن يُبنى الحل.</p></aside>
+</section>
+
+<section class="slide" id="classification-levels" data-lo="LO2">
+  <div class="kicker">سياسة تصنيف البيانات</div>
+  <h2>أربعة مستويات، والسؤال واحد: ما الضرر لو نُشر؟</h2>
+  <table class="t">
+    <tr><th>المستوى</th><th>الضرر لو نُشر</th><th>مثال موازٍ من إدارة الحدائق</th></tr>
+    <tr><td><b>سري للغاية</b></td><td>ضرر استثنائي لا يمكن تداركه على المصالح الوطنية</td><td>نادر في عمل الخدمات البلدية</td></tr>
+    <tr><td><b>سري</b></td><td>ضرر جسيم</td><td>خطط حماية المرافق الحيوية</td></tr>
+    <tr><td><b>مقيد</b></td><td>ضرر محدود على الجهة أو الأفراد</td><td>بيانات المستأجرين، ومعايير التقييم الداخلية</td></tr>
+    <tr><td><b>عام</b></td><td>لا ضرر</td><td>مواعيد عمل الحدائق ورسوم الحجز المنشورة</td></tr>
+  </table>
+  <div class="callout note mt small">المصدر: سياسة تصنيف البيانات، مكتب إدارة البيانات الوطنية. المقيد في السياسة درجات؛ يكفينا هنا المستوى.</div>
+  <aside class="notes"><p>لا تحفظوا التعريفات: السؤال العملي «ما الضرر لو نُشر، وعلى من؟». الخطأ الشائع تصنيف المصدر بحسب من كتبه لا بحسب محتواه. مثال: مقال كتبه مركز الاتصال قد يكون عامًا، وملاحظة داخلية كتبها الفريق نفسه قد تكون مقيدة.</p></aside>
+</section>
+
+<section class="slide" id="personal-in-text" data-lo="LO2">
+  <div class="kicker">البيانات الشخصية</div>
+  <h2>أخطر البيانات الشخصية لا تأتي في حقل، بل في جملة</h2>
+  <div class="cols cols-2">
+    <div class="chat">
+      <div class="msg user"><span class="who">رسالة إلى إدارة الحدائق</span>أرجو تمديد حجز القاعة ساعة، لأن والدتي تخضع لغسيل الكلى صباح ذلك اليوم.</div>
+      <div class="msg ai"><span class="who">ما فيها</span>لا حقل للصحة في النموذج، لكن الرسالة تحمل بيانات صحية عن شخص ثالث.</div>
+    </div>
+    <ul class="bullets">
+      <li>عدّ الحقول: الهوية والجوال والعنوان والحساب البنكي</li>
+      <li>ثم <b>اقرأ النص:</b> الصحة، والأطفال، والوضع المالي</li>
+      <li>نظام حماية البيانات الشخصية يعد البيانات الصحية بيانات حساسة</li>
+      <li>حذف الاسم لا يزيل البيانات الشخصية: الهوية والجوال تعرّفان صاحبهما</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>المثال موازٍ ومن خارج ملفات الحالات. اسأل: لو بحثتم عن كلمة «صحة» في الحقول، هل كنتم ستجدون هذه؟ لا. في المختبر ستقرؤون الرسائل لا الحقول وحدها.</p></aside>
+</section>
+
+<section class="slide" id="pdpl-minimum" data-lo="LO2">
+  <div class="kicker">الحد الأدنى اللازم للغرض</div>
+  <h2>السؤال الأول ليس «كيف نحمي الملفات؟» بل «هل نحتاجها؟»</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · ما الغرض؟</b>قياس جودة الإجابة من قاعدة المعرفة</div>
+    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · ما اللازم له؟</b>مقالات وأسئلة موسومة</div>
+    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · ما الزائد؟</b>ملفات المستفيدين بأسمائهم وهوياتهم</div>
+  </div>
+  <div class="callout tip mt frag" data-frag="c"><b>الخلاصة.</b> يقصر نظام حماية البيانات الشخصية جمع البيانات ومعالجتها على الحد الأدنى اللازم للغرض. إن لم يحتجها الغرض، فالجواب ألا تُستخدم.</div>
+  <aside class="notes"><p>اضغط لكل خطوة. هذا يحل كثيرًا من نقاشات الخصوصية مبكرًا: التجربة التقنية لا تحتاج ملفات حالات، فلا يُطلب لها استثناء ولا موافقة. السؤال يعود حين يُصمم الإطلاق الفعلي، وذلك في اليوم الثالث.</p></aside>
+</section>
+
+<section class="slide" id="permissions-retrieval" data-lo="LO2">
+  <div class="kicker">الصلاحيات والاسترجاع</div>
+  <h2>الحل يقرأ بحساب خدمة، والسؤال يأتي من شخص له صلاحيات أقل</h2>
+  <div class="cols cols-2">
+    <table class="t">
+      <tr><th></th><th>مقالات عامة</th><th>تعليمات داخلية</th></tr>
+      <tr><td>موظف الحجز</td><td>يقرأ</td><td>لا يقرأ</td></tr>
+      <tr><td>حساب الخدمة</td><td>يقرأ</td><td><b>يقرأ</b></td></tr>
+    </table>
+    <ul class="bullets">
+      <li>الاسترجاع يجد أقرب مقطع، لا المقطع المسموح</li>
+      <li>تعليمة في الأمر لا تمنع ما وصل إلى النموذج</li>
+      <li><b>الضابط:</b> تصفية الاسترجاع بصلاحيات من يسأل، قبل أن يصل أي مقطع إلى النموذج</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>مثال موازٍ من إدارة الحدائق. اسأل: من يملك تصحيح هذه الفجوة؟ ليس النموذج، بل من يصمم الاسترجاع مع أمين البيانات. في المختبر قارنوا مصفوفة الوصول عمودًا بعمود.</p></aside>
+</section>
+
+<section class="slide" id="check-minimum-data" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الحد الأدنى؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">فريق يريد قياس مساعد يلخص شكاوى الإنارة للمشرفين، وعينة الشكاوى فيها أسماء وجوالات وعناوين. ما الحد الأدنى اللازم لتجربة الجدوى؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يبرر الكل بجزء: الموقع يكفيه الحي، والأسماء والجوالات لا يحتاجها التلخيص">العينة كما هي، فالعناوين لازمة لفهم موقع العطل بدقة</div>
+      <div class="opt" data-why="يحذف معرّفًا ويبقي آخر: الجوال يعرّف صاحبه كما يعرّفه الاسم">حذف الأسماء وإبقاء الجوالات للتواصل مع أصحاب الشكاوى</div>
+      <div class="opt" data-why="يبحث عن أساس لمعالجة بيانات لا يحتاجها الغرض أصلًا">طلب موافقة كل صاحب شكوى قبل استخدامها في التجربة</div>
+      <div class="opt" data-ok>نص الشكوى دون معرّفات، والحي بدل العنوان</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الغرض تلخيص المشكلة وموقعها، فيكفيه النص والحي. ما زاد على ذلك يُستبعد قبل أي سؤال عن الحماية.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. خيار «ج» يبدو مسؤولًا، لكنه يطلب موافقة على ما لا حاجة له. إن اختار كثيرون «أ» فاسأل: هل يحتاج المشرف رقم القطعة ليفهم أن العمود مطفأ؟</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-1" data-auto="lab" data-lab="2.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>25 دقيقة، والمساعد المرشد مسموح دون رفع ملفات الحالات. الخطوة 3 هي التي تُنسى: قراءة نص الرسالة لا الحقول وحدها. من يكتب «نحل الصلاحيات بتعليمة في الأمر» ارجعوا به إلى الشريحة السابقة. البطاقة المبدئية فيها المعايير الثلاثة الأولى بدرجاتها المرجعية، فلا يتأخر أحد بسبب أمس.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
-<section class="slide section" id="s2" data-auto="section" data-session="2"></section>
-
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s2" data-auto="section" data-session="2">
+  <aside class="notes"><p>ابدأ بمراجعة المختبر 2.1، ثم ننتقل إلى الجدوى التقنية: كيف نصمم تجربة تجيب عن سؤال، لا عرضًا يقنع.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="debrief-2-1" data-lo="LO2">
+  <div class="kicker">ما أظهره المختبر 2.1</div>
+  <h2>التجربة لا تحتاج ملف حالة واحدًا، والصلاحيات معيقة</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">20 / 20</div><div class="lbl">ملفًا فيها هوية وجوال؛ وحساب بنكي في ملف، وبيانات صحية في ملفين، وبيانات طفل في ملف، كلها في نص الرسالة</div></div>
+    <div class="stat"><div class="big">3</div><div class="lbl">مصادر يقرؤها حساب الخدمة ولا يقرؤها الموظف: مقالات المشرفين، وملاحظات الرقابة، وسجلات الاستفسارات</div></div>
+    <div class="stat"><div class="big">2 · 1 · 0</div><div class="lbl">التصنيف، والبيانات الشخصية، والصلاحيات (معيقة)</div></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout warn mt"><b>صاحب الفجوة المعيقة:</b> أمين البيانات مع فريق التقنية: يصفّي الاسترجاع بصلاحيات الموظف الذي يسأل. سترون أثرها في التشغيل بعد قليل.</div>
+  <aside class="notes"><p>ثلاث دقائق. التصنيف المرجعي: المقالات العامة «عام»، والأربعة الباقية «مقيد». من صنّف ملاحظات الرقابة «سري» بدليل مقنع فحكمه مقبول. اسأل: من كتب أن التجربة تحتاج ملفات الحالات؟ لماذا؟</p></aside>
+</section>
+
+<section class="slide" id="spike-vs-demo" data-lo="LO3">
+  <div class="kicker">التجربة والعرض</div>
+  <h2>العرض التوضيحي يثبت أن الشيء ممكن، والتجربة تقيس كم يصح</h2>
+  <table class="t">
+    <tr><th></th><th>عرض توضيحي</th><th>تجربة تقنية</th></tr>
+    <tr><td>الأسئلة</td><td>يختارها من يعرض</td><td>تمثل الطلب، ومنها ما لا جواب له</td></tr>
+    <tr><td>معيار الصحة</td><td>انطباع الحاضرين</td><td>وسم مكتوب لكل سؤال</td></tr>
+    <tr><td>العتبة</td><td>بعد النتيجة، إن وُجدت</td><td>قبل التشغيل</td></tr>
+    <tr><td>الناتج</td><td>انطباع</td><td>سجل تشغيل يعيد غيرك قراءته</td></tr>
+  </table>
+  <aside class="notes"><p>اسأل القاعة: كم عرضًا توضيحيًا رأيتم هذه السنة نجح كل سؤال فيه؟ وكم منها قيس بعد ذلك؟ هذا الفرق هو ما سيقارنه المقيِّمون يوم المناقشة.</p></aside>
+</section>
+
+<section class="slide" id="spike-charter" data-lo="LO3">
+  <div class="kicker">ميثاق التجربة</div>
+  <h2>سؤال واحد، ومدة محددة، وما يحدث في نهايتها</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>السؤال</h4><p class="small mb0">هل يصوغ النموذج الأولي مسودات صحيحة ومسنودة بما يكفي ليستحق التمويل؟</p></div>
+    <div class="card c-cyan"><h4>المدة</h4><p class="small mb0">أيام لا أشهر. في نهايتها قرار، لا تمديد تلقائي.</p></div>
+    <div class="card c-coral"><h4>المقاييس</h4><p class="small mb0">الدقة وفترتها، ولكل لغة، وإخفاقات الاستناد، والتكلفة لكل إجابة صحيحة.</p></div>
+    <div class="card c-purple"><h4>التوقف</h4><p class="small mb0">من صفحة التأطير، دون تغيير بعد رؤية النتيجة.</p></div>
+  </div>
+  <div class="callout warn mt"><b>علامة الخلل:</b> ميثاق يسأل «هل يعمل النموذج؟»: سؤال لا يمكن أن يُجاب بـ«لا».</div>
+  <aside class="notes"><p>الميثاق صفحة واحدة، ويُكتب في المختبر قبل التشغيل. اسأل: لماذا المدة مهمة؟ لأن تجربة بلا نهاية تتحول إلى مشروع بُني قبل أن يُقرر.</p></aside>
+</section>
+
+<section class="slide" id="labelled-set-design" data-lo="LO3">
+  <div class="kicker">مجموعة الأسئلة الموسومة</div>
+  <h2>المجموعة تمثل الطلب الذي سيواجهه الحل، لا الطلب الذي ينجح فيه</h2>
+  <ul class="bullets">
+    <li><b>الفئات:</b> بحسب حصتها من الطلب في النطاق</li>
+    <li><b>اللغات:</b> بالعربية والإنجليزية، واكتب حصة كل لغة في الطلب بجانب حصتها في الأسئلة</li>
+    <li><b>ما لا جواب له:</b> أسئلة يجب أن يمتنع عنها الحل ويحيل إلى المختص</li>
+    <li><b>الوسم لكل سؤال:</b> الجواب المتوقع، والمقال المصدر</li>
+    <li><b>من يكتبها:</b> من يعرف الطلب، لا من يبني الحل</li>
+  </ul>
+  <div class="callout note mt"><b>حين تختلف الحصص:</b> لا تكفي الدقة الإجمالية. اقرأها مع الدقة لكل لغة.</div>
+  <aside class="notes"><p>اسأل: لماذا لا يكتب الأسئلة من يبني الحل؟ لأنه يكتب، دون قصد، ما يعرف أن الحل يجيب عنه. في المختبر ستقارنون توزيع الأسئلة الثلاثين بالطلب.</p></aside>
+</section>
+
+<section class="slide" id="correct-answer" data-lo="LO3">
+  <div class="kicker">معيار الإجابة الصحيحة</div>
+  <h2>صحيحة تعني: الجواب، ومن مصدره، وبلغة السؤال</h2>
+  <div class="cols cols-2">
+    <div class="chat">
+      <div class="msg user"><span class="who">سؤال موازٍ</span>كم رسم حجز ملعب الحي ساعة؟</div>
+      <div class="msg ai bad"><span class="who">تبدو صحيحة</span>رسم الحجز 50 ريالًا للساعة. [مقال 2024]</div>
+      <div class="msg ai good"><span class="who">صحيحة</span>رسم الحجز 60 ريالًا للساعة. [تعميم 2026]</div>
+    </div>
+    <ul class="bullets">
+      <li>الإجابة الأولى مقنعة ومستشهدة، وخاطئة</li>
+      <li>من يراجع بعينه دون الوسم يوافق عليها</li>
+      <li>الامتناع صحيح للأسئلة التي لا جواب لها، وخطأ لغيرها</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>مثال موازٍ من خارج قاعدة معرفة الهضبة. اسأل: من كان سيوافق على الإجابة الأولى لو لم يرَ الثانية؟ في المختبر ستراجعون خمس إجابات بأيديكم قبل أن تروا حكم التصحيح الآلي.</p></aside>
+</section>
+
+<section class="slide" id="how-jawab-works" data-lo="LO3">
+  <div class="kicker">النموذج الأولي «جواب»</div>
+  <h2>خمس خطوات، وكل رقم يعود إلى سجل تشغيل</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · السؤال</b>من الأسئلة الثلاثين</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · الاسترجاع</b>أقرب ثلاثة مقاطع من فهرس متجهات في الذاكرة</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>3 · المسودة</b>من نموذج لغوي، أو بديل استخراجي</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>4 · التصحيح</b>مقابل الوسم</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>5 · السجل</b><code>runs/</code></div>
+  </div>
+  <div class="callout note mt"><b>البديل الاستخراجي</b> ينسخ أقرب جملة ويستشهد بمقالها. لا يترجم ولا يعيد الصياغة، فيقيس الاسترجاع والإعدادات وحدها. أرقام الشرائح منه، وقل في جدولك أيهما أنتج أرقامك.</div>
+  <aside class="notes"><p>اعرض الدفتر حيًا: خلية الإعداد ثم خلية النموذج. من لديه مفتاح لنموذج مجاني يستطيع أن يجربه، والدفتر يحفظ كل رد فلا يتكرر الطلب. النماذج المجانية لها حدود في الدقيقة واليوم، فلا يشغّل الجميع في اللحظة نفسها.</p></aside>
+</section>
+
+<section class="slide" id="check-spike-or-demo" data-lo="LO3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الذي ينقص العرض؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">قدّم مورد عرضًا نجح فيه مساعده في عشرة أسئلة اختارها عن رخص البناء. ما الذي ينقص ليصبح تجربة جدوى؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>أسئلة موسومة تمثل الطلب، وعتبة تُكتب قبل التشغيل</div>
+      <div class="opt" data-why="يكرر العيب نفسه: من يختار الأسئلة يختار ما ينجح فيه">عشرة أسئلة أخرى يختارها المورد نفسه لتأكيد النتيجة السابقة</div>
+      <div class="opt" data-why="يغيّر النموذج ولا يغيّر الاختبار: الأسئلة نفسها لا تمثل الطلب">تشغيل الأسئلة العشرة نفسها على نموذج أكبر وأحدث من المورد</div>
+      <div class="opt" data-why="يقيس الانطباع لا الصحة: الرضا عن العرض لا يقول كم إجابة صحت">استبيان لرأي الموظفين الذين حضروا العرض في سهولة الاستخدام</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> ما يجعل التجربة تجربة هو الاختبار: أسئلة تمثل الطلب بوسومها، وعتبة لا تتحرك بعد النتيجة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. خيار «ج» شائع: «جربوا نموذجًا أكبر». النموذج قد يتحسن، لكن الأسئلة العشرة نفسها لن تقول هل يصلح للطلب الفعلي.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-2" data-auto="lab" data-lab="2.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>25 دقيقة. الميثاق أولًا، ثم التشغيل: مر على الطاولات وتأكد أن العتبة مكتوبة قبل أن تُشغَّل الخلية. من تعطل عنده Colab يفتح الدفتر في JupyterLab، أو يعمل مع زميل؛ والمختبر 2.3 يبدأ من سجل مقدَّم فلا يتأخر أحد. لا تعلنوا الدقة في القاعة: نقرؤها معًا في الجلسة القادمة.</p></aside>
 </section>
 
 <!-- الجلسة 3 -->
 
-<section class="slide section" id="s3" data-auto="section" data-session="3"></section>
-
-<section class="slide" id="s3-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s3" data-auto="section" data-session="3">
+  <aside class="notes"><p>ابدأ بمراجعة المختبر 2.2 دون أرقام الدقة، ثم كيف نقرأ نسبة من ثلاثين سؤالًا.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="debrief-2-2" data-lo="LO3">
+  <div class="kicker">ما أظهره المختبر 2.2</div>
+  <h2>المجموعة لا تطابق الطلب في اللغة، والعين تخطئ في الرسوم</h2>
+  <div class="cols cols-2">
+    <div class="stat"><div class="big">33% / 18%</div><div class="lbl">حصة الإنجليزية في الأسئلة، مقابل حصتها في الطلب. 4 أسئلة من 30 لا جواب لها</div></div>
+    <div class="card c-coral"><h4>المراجعة اليدوية</h4><p class="small mb0">في السؤال الأول، الإجابة «600 ريال» مستشهدة ومقنعة، والرسم بعد التعميم 750. من حكم دون الوسم وافق على خطأ.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>دقيقتان. اسأل: كم طاولة اختلف حكمها مع التصحيح الآلي في إجابة من الخمس؟ ومن كان المصيب؟ لاحظ أن المقال المتقادم الذي وجدتموه أمس هو الذي أنتج هذه الإجابة.</p></aside>
+</section>
+
+<section class="slide" id="small-n" data-lo="LO3">
+  <div class="kicker">مجموعة صغيرة</div>
+  <h2>72% من 25 سؤالًا ليست 72% من 125 سؤالًا</h2>
+  <div class="bars">
+    <div class="row"><span>9 من 10 (90%)</span><div class="bar c-coral" style="--w:98%"></div><span class="val">59.6% – 98.2%</span></div>
+    <div class="row"><span>18 من 25 (72%)</span><div class="bar c-cyan" style="--w:86%"></div><span class="val">52.4% – 85.7%</span></div>
+    <div class="row"><span>90 من 125 (72%)</span><div class="bar c-teal" style="--w:79%"></div><span class="val">63.6% – 79.1%</span></div>
+  </div>
+  <div class="callout tip mt"><b>الخلاصة.</b> الرقم وحده لا يكفي: معه حجم المجموعة وفترة ثقته.</div>
+  <aside class="notes"><p>أمثلة موازية حسبها <code>check.py demo</code>: مساعد يلخص محاضر التفتيش، قيس على ثلاث مجموعات. طول الشريط هو الحد الأعلى للفترة. اسأل: أي النتائج الثلاث تثق بها لقرار تمويل؟ 9 من 10 تبدو الأفضل، وحدّها الأدنى أقل من 60%.</p></aside>
+</section>
+
+<section class="slide" id="wilson-interval" data-lo="LO3">
+  <div class="kicker">فترة ويلسون</div>
+  <h2>فترة ويلسون تصلح للمجموعات الصغيرة والنسب القريبة من الطرفين</h2>
+  <pre class="code" data-file="جدول البيانات: B1 الصحيح، B2 العدد"><code>p      = B1/B2
+center = (p + 1.96^2/(2*B2)) / (1 + 1.96^2/B2)
+half   = 1.96*SQRT(p*(1-p)/B2 + 1.96^2/(4*B2^2)) / (1 + 1.96^2/B2)
+الفترة = center ± half</code></pre>
+  <ul class="bullets">
+    <li>تحقق من صيغتك بمثال تعرف جوابه: 18 من 25 تعطي من 52.4% إلى 85.7%</li>
+    <li>الفترة البسيطة <code>p ± 1.96√(p(1−p)/n)</code> تتجاوز 100% عند 9 من 10</li>
+  </ul>
+  <aside class="notes"><p>لا تشرح الاشتقاق. المهم أن الصيغة في الجدول تُختبر بمثال معروف قبل استخدامها. الفترة البسيطة لـ9 من 10 حدها الأعلى نحو 108%، وهذا وحده سبب كافٍ لاستخدام ويلسون.</p></aside>
+</section>
+
+<section class="slide" id="lower-bound-rule" data-lo="LO3">
+  <div class="kicker">القراءة مقابل العتبة</div>
+  <h2>قارن الحد الأدنى للفترة بعتبتك، لا الرقم النقطي</h2>
+  <div class="cols cols-3">
+    <div class="card c-green"><h4>الحد الأدنى فوق العتبة</h4><p class="small mb0">الدليل كافٍ على هذا الحجم.</p></div>
+    <div class="card c-amber"><h4>العتبة داخل الفترة</h4><p class="small mb0">لا دليل كافٍ بعد: أعد العمل أو وسّع المجموعة.</p></div>
+    <div class="card c-coral"><h4>الحد الأعلى تحت العتبة</h4><p class="small mb0">الدليل يقول إن الحل دون العتبة.</p></div>
+  </div>
+  <div class="callout note mt"><b>كم سؤالًا يلزم؟</b> لنصف عرض 8 نقاط عند 72%: <code>1.96² × 0.72 × 0.28 ÷ 0.08²</code> ≈ 121 سؤالًا.</div>
+  <aside class="notes"><p>هذه القاعدة تمنع أكثر خطأين شيوعًا: إعلان النجاح لأن الرقم النقطي فوق العتبة، وإعلان الفشل لأنه تحتها بقليل. حساب حجم المجموعة إضافي في المختبر.</p></aside>
+</section>
+
+<section class="slide" id="grounding-failures" data-lo="LO3">
+  <div class="kicker">إخفاقات الاستناد</div>
+  <h2>أخطر الإجابات الخاطئة هي التي تبدو مسنودة</h2>
+  <table class="t">
+    <tr><th>النتيجة</th><th>ما حدث</th></tr>
+    <tr><td><code>wrong_source</code></td><td>استشهد بمقال لا يحمل الجواب الصحيح، كالمتقادم</td></tr>
+    <tr><td><code>unsupported</code></td><td>أجاب عن سؤال لا جواب له في قاعدة المعرفة</td></tr>
+    <tr><td><code>permission_leak</code></td><td>استشهد بمحتوى لا يحق للموظف رؤيته</td></tr>
+    <tr><td><code>wrong_fact</code> و<code>wrong_language</code></td><td>المصدر صحيح والجواب خطأ، أو بغير لغة السؤال</td></tr>
+  </table>
+  <div class="callout warn mt"><b>لماذا تُعدّ وحدها:</b> الموظف يراجع المسودة بثقة أكبر حين يرى استشهادًا، فيمر الخطأ.</div>
+  <aside class="notes"><p>الثلاثة الأولى إخفاقات استناد. في المختبر احسبوا نسبتها من الكل. اسأل: أي هذه الأنواع ستراه مديرة المركز أخطر؟ غالبًا التسريب، لأنه يخالف الصلاحيات حتى لو كانت الإجابة صحيحة.</p></aside>
+</section>
+
+<section class="slide" id="cost-per-correct" data-lo="LO3 LO5">
+  <div class="kicker">التكلفة لكل إجابة صحيحة</div>
+  <h2>الموظف يراجع كل مسودة، فيدفع ثمن الخاطئة أيضًا</h2>
+  <pre class="code" data-file="الصيغة"><code>(تكلفة النموذج + عدد الإجابات × دقائق المراجعة × تكلفة الدقيقة) ÷ عدد الصحيح</code></pre>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>مثال موازٍ: محاضر التفتيش</h4><p class="small mb0">25 ملخصًا، والنموذج 0.02 ريال، والمراجعة 1.5 دقيقة بريالين للدقيقة، وصح 18: (0.02 + 75) ÷ 18 ≈ 4.17 ريال.</p></div>
+    <ul class="bullets">
+      <li>النموذج جزء صغير جدًا من التكلفة</li>
+      <li>كل إجابة خاطئة ترفع التكلفة لكل صحيحة</li>
+      <li>ستعود هذه الصيغة في التكلفة الإجمالية غدًا</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>اسأل قبل الحساب: أيهما أكبر، النموذج أم المراجعة؟ أكثر القاعة تتوقع النموذج. هذه الصيغة تربط التجربة بدراسة الجدوى: الدقة تحدد كم دقيقة مراجعة تُدفع لكل ريال منفعة.</p></aside>
+</section>
+
+<section class="slide" id="check-against-threshold" data-lo="LO3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>هل يستوفي العتبة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">مساعد لتلخيص محاضر التفتيش صح في 21 من 30، أي 70%، وفترة ويلسون من 52% إلى 83%. العتبة المكتوبة قبل التجربة: دقة 75%، وحد أدنى للفترة 60%. ما الحكم؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقرأ الحد الأعلى: الفترة تقول إن الدقة قد تكون أدنى بكثير من العتبة">يستوفي العتبة، لأن الحد الأعلى للفترة 83% فوق 75%</div>
+      <div class="opt" data-why="يحرك العتبة بعد النتيجة: الفرق الصغير لا يجعل 70% تساوي 75%">يستوفيها تقريبًا، فخمس نقاط فرق صغير في ثلاثين سؤالًا</div>
+      <div class="opt" data-ok>لا يستوفيها: الدقة والحد الأدنى تحت العتبة</div>
+      <div class="opt" data-why="يرفض القياس بدل قراءته: الفترة تقول ما يمكن قوله من ثلاثين سؤالًا">لا يمكن أي حكم، فثلاثون سؤالًا لا تكفي لأي قرار مهما كان</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الحكم يقارن الدقة والحد الأدنى بالعتبة المكتوبة. 70% أقل من 75%، و52% أقل من 60%.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. خيار «د» مهم: العينة صغيرة، لكنها تكفي لقول إن الحل لم يستوفِ العتبة بعد. الخطوة التالية إعادة العمل، لا رفض القياس.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-3" data-auto="lab" data-lab="2.3">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>25 دقيقة في جدول البيانات. كل الطاولات تبدأ من <code>results_starter.csv</code> فتتطابق الأرقام. تأكدوا أن الصيغة اختُبرت بمثال 18 من 25 أولًا. الخطأ الشائع: قسمة تكلفة المراجعة على كل الأسئلة لا على الصحيح، أو نسيان أن الموظف يراجع الخاطئة أيضًا.</p></aside>
 </section>
 
 <!-- الجلسة 4 -->
 
-<section class="slide section" id="s4" data-auto="section" data-session="4"></section>
-
-<section class="slide" id="s4-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s4" data-auto="section" data-session="4">
+  <aside class="notes"><p>ابدأ بقراءة نتيجة التشغيل المبدئي معًا، ثم أسباب الإخفاق، ثم التكييف والقرار.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="debrief-2-3" data-lo="LO3">
+  <div class="kicker">ما أظهره المختبر 2.3</div>
+  <h2>النموذج المبدئي يصح في نصف الأسئلة، وكل إخفاقاته إخفاقات استناد</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">50.0%</div><div class="lbl">15 من 30، وفترة ويلسون من 33.2% إلى 66.8%</div></div>
+    <div class="stat"><div class="big">15</div><div class="lbl">إخفاق استناد: 10 مصدر خاطئ، و4 إجابات لما لا جواب له، وتسريب واحد</div></div>
+    <div class="stat"><div class="big">4.28</div><div class="lbl">ريال لكل إجابة صحيحة؛ النموذج منها أقل من فلس</div></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout note mt"><b>لكل لغة:</b> العربية 10 من 20، والإنجليزية 5 من 10. الفترتان أوسع من أن تقولا إن إحدى اللغتين أسوأ.</div>
+  <aside class="notes"><p>ثلاث دقائق. الحد الأدنى 33.2% تحت العتبة المرجعية 65%، وتحت معيار التوقف 50%؛ والمعيار يُطبَّق بعد جولة تكييف واحدة، وهي المختبر القادم. اسأل: لو كان النموذج مجانيًا، كم تنخفض التكلفة؟ تقريبًا لا شيء.</p></aside>
+</section>
+
+<section class="slide" id="failure-causes" data-lo="LO3">
+  <div class="kicker">أسباب الإخفاق</div>
+  <h2>صنّف كل إخفاق بسببه، ثم اسأل أين علاجه</h2>
+  <table class="t">
+    <tr><th>السبب</th><th>العلامة في السجل</th><th>العلاج عادة في</th></tr>
+    <tr><td>مصدر متقادم أو متعارض</td><td>استشهد بمقال يناقضه مصدر أحدث</td><td><b>البيانات</b></td></tr>
+    <tr><td>استرجاع أخطأ المقال</td><td>المقال الصحيح موجود ولم يُسترجع</td><td><b>النموذج الأولي</b></td></tr>
+    <tr><td>صلاحيات</td><td>استشهد بمحتوى لا يحق للسائل</td><td><b>النموذج الأولي</b> والبيانات</td></tr>
+    <tr><td>أجاب وكان عليه أن يمتنع</td><td>جواب لسؤال لا مقال له</td><td><b>النموذج الأولي</b> والإجراء</td></tr>
+    <tr><td>لغة</td><td>لا مقال بلغة السؤال</td><td><b>البيانات</b></td></tr>
+  </table>
+  <aside class="notes"><p>العمود الأخير هو ما تحتاجه لجنة التوجيه: إخفاق علاجه في البيانات لا يحله نموذج أفضل. اسأل: إن كان أكثر الإخفاقات في البيانات، ماذا يعني ذلك لخيار «نشتري نموذجًا أقوى»؟</p></aside>
+</section>
+
+<section class="slide" id="settings-map" data-lo="LO3">
+  <div class="kicker">إعدادات النموذج الأولي</div>
+  <h2>أربعة إعدادات، ولكل منها سبب تعالجه وثمن</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>استبعاد مقالات</h4><p class="small mb0">يمنع المتقادم من الاسترجاع. ثمنه: سؤال مقاله مستبعد بلا جواب.</p></div>
+    <div class="card c-cyan"><h4>احترام الصلاحيات</h4><p class="small mb0">يصفي بدور السائل. ثمنه: لا شيء يُذكر.</p></div>
+    <div class="card c-coral"><h4>التقطيع</h4><p class="small mb0">بالمقال أو بالفقرة. الفقرة تجد الرقم داخل وثيقة طويلة، وقد تأتي بفقرة مجاورة.</p></div>
+    <div class="card c-purple"><h4>عتبة الامتناع</h4><p class="small mb0">تحتها يمتنع ويحيل. ثمنها: امتناع عن أسئلة لها جواب.</p></div>
+  </div>
+  <div class="callout warn mt"><b>لا تغيّر الأسئلة ولا التصحيح.</b> التكييف الذي يغيّر الاختبار ليس تكييفًا.</div>
+  <aside class="notes"><p>لا تقل أي المقالات تُستبعد ولا أي عتبة: هذا عمل المختبر، وقائمة أمس هي المدخل. اسأل: أي إعداد له ثمن لا يظهر في الدقة؟ عتبة الامتناع: الامتناع يحيل الاستفسار إلى موظف، فلا يوفر دقائق.</p></aside>
+</section>
+
+<section class="slide" id="paired-comparison" data-lo="LO3">
+  <div class="kicker">المقارنة المزدوجة</div>
+  <h2>قارن التشغيلين سؤالًا بسؤال، لا فترة بفترة</h2>
+  <div class="cols cols-2">
+    <table class="t">
+      <tr><th>مثال موازٍ: 25 محضرًا</th><th>العدد</th></tr>
+      <tr><td>تحسّن</td><td>6</td></tr>
+      <tr><td>ساء</td><td>1</td></tr>
+      <tr><td>صحيح في الاثنين</td><td>13</td></tr>
+      <tr><td>خطأ في الاثنين</td><td>5</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>قبل 14 من 25، وبعد 19 من 25: الفترتان متداخلتان</li>
+      <li>لكن على المحاضر نفسها: ستة تحسنت وواحد ساء</li>
+      <li>المحضر الذي ساء يكشف ثمن التكييف: اقرأه</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>مثال موازٍ: مساعد محاضر التفتيش. مقارنة فترتين مستقلتين تضيع أن الأسئلة نفسها قيست مرتين. ستة مقابل واحد على الأسئلة نفسها دليل أقوى من تداخل الفترتين. في الدفتر خلية تحسب هذه الأعداد.</p></aside>
+</section>
+
+<section class="slide" id="when-not-ai" data-lo="LO3">
+  <div class="kicker">متى لا يكون الذكاء الاصطناعي هو الحل</div>
+  <h2>بعض الإخفاقات يعالجها تغيير الإجراء أرخص من أي نموذج</h2>
+  <ul class="bullets">
+    <li><b>سؤال جوابه في نظام آخر:</b> ربط بالنظام أو رد جاهز يحيل إليه</li>
+    <li><b>محتوى متقادم:</b> مراجعة المقالات بعد كل تعميم، وتنفع الموظفين اليوم دون أي حل</li>
+    <li><b>أسئلة متكررة بجواب ثابت:</b> ردود جاهزة يختارها الموظف</li>
+    <li><b>نقص لغة:</b> ترجمة المقالات الأساسية مرة واحدة</li>
+  </ul>
+  <div class="callout tip mt"><b>هذا هو الخيار الأول غدًا:</b> تغيير الإجراء دون ذكاء اصطناعي، بتكلفته ومنافعه.</div>
+  <aside class="notes"><p>اسأل: أي هذه يحتاج تجربة تقنية؟ لا شيء منها. الخيار غير المعتمد على الذكاء الاصطناعي ليس «لا نفعل شيئًا»، بل مجموعة تغييرات محددة لها تكلفة ومنفعة، وستحسبونها غدًا.</p></aside>
+</section>
+
+<section class="slide" id="go-rework-stop" data-lo="LO3">
+  <div class="kicker">القرار</div>
+  <h2>ثلاثة قرارات، وكل منها يُكتب بدليله والشرط الذي يغيّره</h2>
+  <div class="cols cols-3">
+    <div class="card c-green"><h4>المضي</h4><p class="small mb0">العتبة مستوفاة بحدها الأدنى، ولا تسريب.</p></div>
+    <div class="card c-amber"><h4>إعادة العمل</h4><p class="small mb0">فوق معيار التوقف وتحت العتبة، والعلاج معروف المكان.</p></div>
+    <div class="card c-coral"><h4>التوقف</h4><p class="small mb0">معيار التوقف تحقق بعد التكييف، أو بقي تسريب لا تغلقه الإعدادات.</p></div>
+  </div>
+  <div class="callout note mt"><b>الشرط الذي يغيّره، مثلًا:</b> «نعيد القياس على مجموعة أكبر بعد العلاج، ونمضي إن كان الحد الأدنى فوق العتبة».</div>
+  <aside class="notes"><p>العتبة ومعايير التوقف من صفحة التأطير أمس، لا من شريحة اليوم. إعادة العمل ليست فشلًا: هي القرار الصحيح حين يكون العلاج معروفًا ورخيصًا مقارنة بالبناء الكامل.</p></aside>
+</section>
+
+<section class="slide" id="check-fix-location" data-lo="LO3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أين العلاج؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">مساعد لإدارة الأحوال البلدية أجاب عن رسم «بدل الفاقد» بمبلغ من مقال لم يُحدَّث بعد تعميم الرسوم الأخير، واستشهد به. أين العلاج الأصح؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يعالج العرض لا السبب: سيمتنع عن أسئلة رسوم صحيحة المصدر أيضًا">في الإعدادات: رفع عتبة الامتناع حتى يمتنع عن كل أسئلة الرسوم</div>
+      <div class="opt" data-ok>في البيانات: تحديث المقال ومراجعته بعد كل تعميم</div>
+      <div class="opt" data-why="النموذج لا يعرف تعميم الجهة: المقال المسترجع هو مصدر الخطأ">في النموذج: نموذج أكبر يعرف أن رسوم الجهة تغيرت هذا العام</div>
+      <div class="opt" data-why="تعليمة لا تصحح المصدر: النموذج يرى المقال المتقادم وحده">في الأمر: تعليمة تطلب من النموذج التحقق من أحدث رسم معتمد</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المصدر المتقادم إخفاق بيانات: يتكرر مع أي نموذج حتى يُصحح المقال، وتصحيحه ينفع الموظفين دون أي حل.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. استبعاد المقال حل مؤقت في التجربة، والعلاج الدائم تصحيحه. من اختار «ج» اسأله: من أين سيعرف النموذج رسوم هذه الجهة تحديدًا؟</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-4" data-auto="lab" data-lab="2.4">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>25 دقيقة، وذكاء اصطناعي كامل. الخطوة 1 تحتاج قراءة المقالين لا العمود وحده. من لم يُنهِ المختبر 1.4 يستخدم <code>kb_findings_reference.csv</code>. راقب من يغيّر الأسئلة أو التصحيح لترتفع الدقة. القرار يُكتب مقابل عتبة المختبر 1.3.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-4" data-lo="LO3">
+  <div class="kicker">ما أظهره المختبر 2.4</div>
+  <h2>التكييف رفع الدقة إلى 76.7%، والقرار إعادة العمل</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">23 / 30</div><div class="lbl">76.7%، وفترة ويلسون من 59.1% إلى 88.2%؛ ولا تسريب</div></div>
+    <div class="stat"><div class="big">9 / 1</div><div class="lbl">سؤالًا تحسّن مقابل سؤال ساء، على الأسئلة نفسها</div></div>
+    <div class="stat"><div class="big">2.79</div><div class="lbl">ريال لكل إجابة صحيحة، بعد 4.28</div></div>
+  </div>
+  <div class="callout warn mt"><b>لماذا إعادة العمل:</b> الحد الأدنى 59.1% تحت العتبة 65% وفوق معيار التوقف 50%. والعلاج في البيانات: تصحيح المقالات المتقادمة، ونسخ إنجليزية للأساسية، ثم إعادة القياس على نحو 150 سؤالًا.</div>
+  <aside class="notes"><p>خمس دقائق. الأسباب في التشغيل المبدئي: مصدر متقادم 6، وامتناع واجب 4، ولغة 3، واسترجاع 1، وصلاحيات 1. السؤال الذي ساء (q15) سببه التقطيع بالفقرة: فقرة رسوم من التعميم تقدّمت على مقال السداد. اسأل: من قرر «المضي»؟ بأي عتبة؟ هذا الرقم، 76.7% وحده الأدنى، يدخل حساب المنافع غدًا.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة اليوم 2</div>
   <h2>ثلاثة أمور تبقى معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>ما لا يحتاجه الغرض لا يُستخدم</h4><p class="small mb0">والاسترجاع يُصفّى بصلاحيات من يسأل.</p></div>
+    <div class="card c-coral"><h4>الرقم مع فترته</h4><p class="small mb0">والحد الأدنى يقارن بعتبة كُتبت قبل التجربة.</p></div>
+    <div class="card c-purple"><h4>العلاج حيث السبب</h4><p class="small mb0">كثير من إخفاقات الذكاء الاصطناعي إخفاقات بيانات.</p></div>
   </div>
+  <aside class="notes"><p>اسأل كل طاولة: ما القرار الذي كتبتموه؟ وما الشرط الذي يغيّره؟ دع طاولتين بقرارين مختلفين تشرحان السبب.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
   <div class="kicker">التالي</div>
-  <h2>اليوم 3: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <h2>اليوم 3: المخاطر والخيارات ودراسة الجدوى</h2>
+  <p class="lead">احتفظ بجدول نتائجك وقرارك. غدًا تصنف المخاطر، وتحسب تكلفة أربعة خيارات، وتختبر حساسية التوصية للدقة التي قستها اليوم.</p>
+  <aside class="notes"><p>القراءة الموجهة لمن يريد: الملخص التنفيذي للإطار الوطني لإدارة مخاطر الذكاء الاصطناعي من مصدره الرسمي، وملف <code>risk_levels.txt</code>. في نهاية الغد تُسلَّم حزمة حالة المشروع الختامي.</p></aside>
 </section>

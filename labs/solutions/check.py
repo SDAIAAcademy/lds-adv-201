@@ -158,7 +158,7 @@ def lab_1_3():
     share = sum(int(r["enquiries_91_days"]) for r in scope) / sum(int(r["enquiries_91_days"]) for r in ref)
     print(f"in-scope share of demand {share:.1%}")
     print("reference threshold: accuracy at least 80%, the lower bound of its 95% interval at least 65%, "
-          "no permission leak; stop if the lower bound is under 50% or a leak cannot be closed by settings")
+          "no permission leak; stop if the lower bound is still under 50% after one adaptation round or a leak cannot be closed by settings")
     ok(abs(per_min - 2.1429) < 0.001, "cost per minute")
 
 
