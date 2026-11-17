@@ -318,8 +318,8 @@ def lab_3_2():
     out = [f["option"] for f in flows if "خارج المملكة" in f["hosted"]]
     print("options whose data leave the Kingdom by default:", out)
     ok(out == ["B"], "only option B")
-    print("reference five risks: R01 stale fee (bands 3 x 2), R02 restricted criteria in a draft (2 x 3), "
-          "R03 personal data abroad (option B: 3 x 3), R05 over-reliance (2 x 2), R04 English service (3 x 2)")
+    print("reference five risks: R01 stale fee (likelihood x impact 3 x 2 = 6), R02 restricted criteria in a draft (2 x 3 = 6), "
+          "R03 personal data abroad (option B: 4 x 3 = 12, high), R05 over-reliance (3 x 2 = 6), R04 English service (3 x 2 = 6); scales 1 to 4 as in the national AI risk management framework")
     print("gate: B passes only with in-Kingdom hosting (+720 SAR per seat a year) and a transfer assessment; "
           "A, C, D pass with conditions (C: personal data removed before the model; all: a person sends every reply)")
 
@@ -375,14 +375,19 @@ def lab_capstone():
     print("signage objections by month (the migration gap):", dict(sorted((m, n) for (_, m), n in weeks.items())))
     rnd = [r for r in clean if r["qa_sample_type"] == "random"]
     print(f"random QA error rate {sum(r['qa_result'] != 'correct' for r in rnd) / len(rnd):.3f} (n={len(rnd)})")
-    for label, s in (("starter", {"case": "objections", "role": "officer"}),
-                     ("adapted", {"case": "objections", "role": "officer", "exclude_articles": ["B03", "B19"],
-                                  "respect_permissions": True, "chunking": "paragraph", "min_score": 0.25})):
-        rows, fig = J.run(s, write=False)
+    # review minutes and the cost of a minute come from the capstone pack: 4 minutes, 240,000 / (1,540 x 60)
+    base = {"case": "objections", "role": "officer", "review_minutes": 4.0, "sar_per_minute": 240000 / (1540 * 60)}
+    figs = {}
+    for label, s in (("starter", base),
+                     ("adapted", dict(base, exclude_articles=["B03", "B19"], respect_permissions=True,
+                                      chunking="paragraph", min_score=0.25))):
+        rows, figs[label] = J.run(dict(J.STARTER, **s), write=False)
         print(label, end=": ")
-        J.show(fig)
+        J.show(figs[label])
+    ok(figs["adapted"]["correct"] == 22, "capstone adapted figures")
     inp = CM.read_inputs(cap / "cost_sheets.xlsx")
-    inp["a"]["accuracy"], inp["a"]["accuracy_low"] = 0.733, 0.556
+    inp["a"]["accuracy"] = round(figs["adapted"]["accuracy"], 3)
+    inp["a"]["accuracy_low"] = round(figs["adapted"]["wilson_low"], 3)
     r = CM.model(inp)
     for o in CM.OPTIONS:
         print(f"  {o}: 3-year TCO {r[o]['tco3']:,.0f}, net {r[o]['net3']:,.0f}, break-even {r[o]['break_even_month']}")

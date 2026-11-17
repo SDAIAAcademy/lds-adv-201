@@ -50,6 +50,9 @@ STARTER_RUN = '''CASE = "enquiries"     # المشروع الختامي: "object
 ROLE = "agent"         # المشروع الختامي: "officer"
 
 starter = dict(J.STARTER, case=CASE, role=ROLE, label=f"{CASE}_starter")
+# المشروع الختامي: دقائق المراجعة وتكلفة الدقيقة من ملاحظات المقابلات وورقة التكاليف في حزمة الحالة
+# starter["review_minutes"] = ...
+# starter["sar_per_minute"] = ...
 rows_starter, fig_starter = J.run(starter)
 J.show(fig_starter)
 print("سجل التشغيل:", f"runs/{starter['label']}.csv", "و", f"runs/{starter['label']}.json")'''
